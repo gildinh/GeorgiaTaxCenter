@@ -30,7 +30,7 @@ $(document).ready(function () {
         }else if($("#caption_c-7").length > 0){
             refreshKeep();
             return true;
-		else{
+		}else{
 			console.log("Else was hit");
 			rndBgImage();
 			console.log("If the hash doesnt change and page is refreshed.");
