@@ -5,7 +5,7 @@
 
 $(window).on("load", function(){
 	// Initially Loads the background images.
-	if(window.location.href.indexOf("GXD") > -1){
+	if(window.location.href.indexOf("GXD") > -1 && ($('#container_d-6').length !== 0){
 		rndBgImage();
 		console.log("Initial Load of Background");
 	}
