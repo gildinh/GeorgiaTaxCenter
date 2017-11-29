@@ -23,14 +23,16 @@ $(document).ready(function () {
     //Background3 Removal and CSS change AFTER Login//
     $(window).on('hashchange', function(){
 		console.log("This determines if there is a change in hash");
-        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
-        if(window.location.hash && $('#l_n-1-2').length == 0){
-            $("body").css("background", "#EEE9E9");
-        ///////////////SOLUTION FOR LOGIN/////////////////////////
-		console.log("Solution for login found.");
-        }else if($("#caption_c-7").length > 0){
+		///////////////SOLUTION FOR LOGIN/////////////////////////
+		if($("#caption_c-7").length > 0){
             refreshKeep();
             console.log("Added new format to login page.");
+			return false;
+			console.log("Solution for login found.");
+        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
+        }else if(window.location.hash && $('#l_n-1-2').length == 0){
+            $("body").css("background", "#EEE9E9");
+			console.log("This will keep background grey");
 		}else{
 			console.log("Else was hit");
 			rndBgImage();
