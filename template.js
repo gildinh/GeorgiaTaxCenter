@@ -26,7 +26,11 @@ $(document).ready(function () {
         ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
         if(window.location.hash && $('#l_n-1-2').length == 0){
             $("body").css("background", "#EEE9E9");
-        }else{
+        ///////////////SOLUTION FOR LOGIN/////////////////////////    
+        }else if($("#caption_c-7").length > 0){
+            refreshKeep();
+            return true;
+		else{
 			console.log("Else was hit");
 			rndBgImage();
 			console.log("If the hash doesnt change and page is refreshed.");
