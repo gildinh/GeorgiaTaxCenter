@@ -3,48 +3,44 @@
    as well as altering the navigation bar 
 */
 
-$(document).ready(function () {
-                    /////////////////Solution For VIEW ON TAP////////////////////////
-                    if($('#l_n-1-2').length === 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
-                        refreshKeep();
-                    ////////////ALSO INITIAL LOAD/////////////
-                    ////////////LOADS BACKGROUND IMAGE FROM TIMEOUT/LOGOFF/////////////////
-                    }if(("onhashchange" in document) == false && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
-                        rndBgImage();
-                    }if(("onhashchange" in document) == false && $('#l_n-1-2').length == 0 && $('caption2_d-9').length == 0){
-                        $("body").css("background", "#EEE9E9");
-                    ///////LOADS BACKGROUND FOR LOG-OFF & SYSTEM ERROR///////////////
-                    }if(($('.SessionMessageContainer.BadWindowContainer').length > 0) || ($('.SessionMessageReturn.LoggedOffReturn').length > 0)){ 
-                        rndBgImage();
-                    }
-        });
+    /////////////////Solution For VIEW ON TAP////////////////////////
+    if($('#l_n-1-2').length === 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
+        refreshKeep();
+    ////////////ALSO INITIAL LOAD/////////////
+    ////////////LOADS BACKGROUND IMAGE FROM TIMEOUT/LOGOFF/////////////////
+    }if(("onhashchange" in document) == false && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
+        rndBgImage();
+    }if(("onhashchange" in document) == false && $('#l_n-1-2').length == 0 && $('caption2_d-9').length == 0){
+        $("body").css("background", "#EEE9E9");
+    ///////LOADS BACKGROUND FOR LOG-OFF & SYSTEM ERROR///////////////
+    }if(($('.SessionMessageContainer.BadWindowContainer').length > 0) || ($('.SessionMessageReturn.LoggedOffReturn').length > 0)){ 
+        rndBgImage();
+    }
 
-        //Removes Background Image On HashChange//
-        //Background3 Removal and CSS change AFTER Login//
-        $(window).on('hashchange', function(){
-            /////////SOLUTION FOR LOGGED OUT AND INITIAL START/////////
-            if(("onhashchange" in document) == false && $('#l_n-1-2').length > 0 && $('caption2_d-a').length > 0){
-                    rndBgImage();
-                    return false;    
-            ///////////////SOLUTION FOR LOGIN/////////////////////////    
-            }if($("#caption_c-7").length > 0){
-                refreshKeep();
-                return false;
-            ///////////////RE-ADD BACKGROUND/////////////////////////    
-            }if($('#caption2_n-7').length > 0 && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
-            
-                rndBgImage();
-                return false;
-            ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
-            }if($('#l_n-1-2').length == 0){
-                $("body").css("background", "#EEE9E9");
-                return false;
-            }
-            else{
-                return true;
-            }
-            
-        });
+    //Removes Background Image On HashChange//
+    //Background3 Removal and CSS change AFTER Login//
+    $(window).on('hashchange', function(){
+		/////////SOLUTION FOR LOGGED OUT AND INITIAL START/////////
+		if(("onhashchange" in document) == false && $('#l_n-1-2').length > 0 && $('caption2_d-a').length > 0){
+			rndBgImage();
+			return false;    
+        ///////////////SOLUTION FOR LOGIN/////////////////////////    
+        }if($("#caption_c-7").length > 0){
+            refreshKeep();
+            return false;
+        ///////////////RE-ADD BACKGROUND/////////////////////////    
+        }if($('#caption2_n-7').length > 0 && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
+            rndBgImage();
+			return false;
+        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
+        }if($('#l_n-1-2').length == 0){
+            $("body").css("background", "#EEE9E9");
+            return false;
+        }
+        else{
+            return true;
+        }
+    });
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
             
