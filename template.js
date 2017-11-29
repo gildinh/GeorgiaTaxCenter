@@ -3,30 +3,11 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $("#caption_c-7").length > 0){
-        refreshKeep();
-		console.log("Page is refreshed inside a logon");
-	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length > 0){
-		console.log("Going back from a request");
-		rndBgImage();
-		console.log("Background refreshed");
-	//When accessing a web request outside login, it keeps the backgound grey.
-	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
-		console.log("GXD located and has a hash");
-		$("body").css("background", "#EEE9E9");
-		console.log("Keeps background grey");
-	//This reloads the new layout when inside a login.
-	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length == 0){
-		refreshKeep();
-		console.log("Reloads inside login!");
-	//Should add the background for every other case. 
-    }else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
-		rndBgImage();
-		console.log("Background Image Successfully Loaded");
-	}else{
-		rndBgImage();
-		console.log("GXD was not detected");
-	}
+	console.log("Dom is finished");
+	
+	$(window).load(function() {
+		console.log("Page refreshed.");
+	});
 });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
