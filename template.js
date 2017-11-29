@@ -2,7 +2,7 @@
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar 
 */
-
+$(document).ready(function () {
     /////////////////Solution For VIEW ON TAP////////////////////////
     if($('#l_n-1-2').length === 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
         refreshKeep();
@@ -16,7 +16,7 @@
     }if(($('.SessionMessageContainer.BadWindowContainer').length > 0) || ($('.SessionMessageReturn.LoggedOffReturn').length > 0)){ 
         rndBgImage();
     }
-
+ });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
     $(window).on('hashchange', function(){
