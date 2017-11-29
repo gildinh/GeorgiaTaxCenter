@@ -5,7 +5,7 @@
 $(document).ready(function () {
 	console.log("Dom is finished");
 	
-	$(window).load(function() {
+	$(window).on("load", function() {
 		console.log("Page refreshed.");
 	});
 });
