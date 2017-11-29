@@ -17,8 +17,7 @@ $(document).ready(function () {
 	console.log("Dom is finished");
 	}else{
 		$("body").css("background", "#EEE9E9");
-	}
-	
+	}	
 });
 
 
@@ -34,7 +33,6 @@ $(window).on('hashchange', function(){
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
-		}
 		console.log("This will keep background grey");
 		return true;
 	}else{
@@ -42,7 +40,7 @@ $(window).on('hashchange', function(){
 		rndBgImage();
 		console.log("If the hash doesnt change and page is refreshed.");
 		return true;
-		}
+	}
 });
 
 
