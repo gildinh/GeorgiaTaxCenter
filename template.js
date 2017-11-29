@@ -2,39 +2,39 @@
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar 
 */
-$(document).ready(function () {
-	rndBgImage();
-	console.log("Dom is finished");
-	
-	
+
+$(window).on("load", function() {
+	// Initially Loads the background images.
+	if(window.location.href.indexOf("GXD") > -1 && $('#container_d-6').length > 0){
+		rndBgImage();
+		console.log("Initial Load of Background");
 });
 
-$(document).on('load', function() {
-		console.log("Page refreshed.");
-	});
-$(window).on("load", function() {
-	$("body").css("background", "#EEE9E9");
-	console.log("window onloiad.");
+$(document).ready(function () {
+	
+	console.log("Dom is finished");
 });
-    //Removes Background Image On HashChange//
-    //Background3 Removal and CSS change AFTER Login//
-    $(window).on('hashchange', function(){
-		console.log("This determines if there is a change in hash");
-		///////////////SOLUTION FOR LOGIN/////////////////////////
-		if($("#caption_c-7").length > 0){
-            refreshKeep();
-            console.log("Added new format to login page.");
-			console.log("Solution for login found.");
-        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
-        }else if(window.location.hash && $('#l_n-1-2').length == 0){
-            $("body").css("background", "#EEE9E9");
-			console.log("This will keep background grey");
-		}else{
-			console.log("Else was hit");
-			rndBgImage();
-			console.log("If the hash doesnt change and page is refreshed.");
-        }
-    });
+
+
+ //Removes Background Image On HashChange//
+//Background3 Removal and CSS change AFTER Login//
+$(window).on('hashchange', function(){
+	console.log("This determines if there is a change in hash");
+	// SOLUTION FOR LOGON
+	if($("#caption_c-7").length > 0){
+        refreshKeep();
+        console.log("Added new format to login page.");
+		console.log("Solution for login found.");
+    // REMOVES THE BACKGROUND IMAGE
+    }else if(window.location.hash && $('#l_n-1-2').length == 0){
+        $("body").css("background", "#EEE9E9");
+		console.log("This will keep background grey");
+	}else{
+		console.log("Else was hit");
+		rndBgImage();
+		console.log("If the hash doesnt change and page is refreshed.");
+		}
+});
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
             if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
