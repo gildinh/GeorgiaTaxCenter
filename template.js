@@ -3,7 +3,7 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	if(window.location.href.indexOf("GXD") > -1 && ("onhashchange" in document) === false){
+	if(window.location.href.indexOf("GXD") > -1){
         ////////////ALSO INITIAL LOAD/////////////
 		rndBgImage();
 		console.log("Background Image Successfully Loaded");
@@ -11,21 +11,29 @@ $(document).ready(function () {
 		return false;
 		console.log("GXD was not detected");
 		}
+	});
  });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
     $(window).on('hashchange', function(){
+		if(("onhashchange" in document) === false){
+			console.log("Hash does not change");
+		}
+		
 		/////////SOLUTION FOR LOGGED OUT AND INITIAL START/////////
-		if(("onhashchange" in document) == false && $('#l_n-1-2').length > 0 && $('caption2_d-a').length > 0){
+		if(("onhashchange" in document) === false && $('#l_n-1-2').length > 0 && $('caption2_d-a').length > 0){
 			rndBgImage();
+			console.log("Re-adds the old background.");
 			return false;    
         ///////////////SOLUTION FOR LOGIN/////////////////////////    
         }if($("#caption_c-7").length > 0){
             refreshKeep();
+			console.log("This is the new format for the login.");
             return false;
         ///////////////RE-ADD BACKGROUND/////////////////////////    
         }if($('#caption2_n-7').length > 0 && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
             rndBgImage();
+			console.log("This will re-add the background");
 			return false;
         ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
         }if($('#l_n-1-2').length == 0){
@@ -41,7 +49,7 @@ $(document).ready(function () {
     });
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
-            
+            if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
             //GXT Environment Images
             var GXTIMAGES = [
             'https://itstest.dor.ga.gov/Images/gtcimg1.jpg',
@@ -55,7 +63,7 @@ $(document).ready(function () {
                 'background-position' : 'top',
                 'background-attachment' : 'fixed'
                 });
-            
+            }else if(window.location.href.indexOf("testgtc") > -1){
             //GXS Environment Images
             var GXSIMAGES = [
             'https://itstest.dor.ga.gov/Images/gtcimg1.jpg',
@@ -70,7 +78,7 @@ $(document).ready(function () {
                 'background-attachment' : 'fixed'
                 });
             
-            
+            }else if(window.location.href.indexOf("gtc.dor") > -1){
             //Production Link Images
             var PRODGTCIMAGES = [
             'https://gtc.dor.ga.gov/images/GTCimg1.jpg', //Cherry Blossom Farm Ã¢â‚¬â€œ Margie
@@ -84,6 +92,7 @@ $(document).ready(function () {
                 'background-position' : 'top',
                 'background-attachment' : 'fixed'
                 });
+			}
         }
         
         //Adds the new format to the LOGIN page
