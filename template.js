@@ -3,12 +3,15 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	if(window.location.href.indexOf("GXD") > -1){
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
         ////////////ALSO INITIAL LOAD/////////////
+		console.log("GXD located and has a hash");
+		$("body").css("background", "#EEE9E9");
+		console.log("Keeps background grey");
+    }else if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
 		console.log("Background Image Successfully Loaded");
-    }else{
-		return false;
+	}else{
 		console.log("GXD was not detected");
 		}
 });
@@ -23,7 +26,6 @@ $(document).ready(function () {
 			console.log("Else was hit");
 			rndBgImage();
 			console.log("If the hash doesnt change and page is refreshed.");
-            return true;
         }
     });
         //Function that store image in array and randomly choses images.
