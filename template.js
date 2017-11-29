@@ -20,7 +20,6 @@ $(document).ready(function () {
  //Removes Background Image On HashChange//
 //Background3 Removal and CSS change AFTER Login//
 $(window).on('hashchange', function(){
-	console.log("This determines if there is a change in hash");
 	// SOLUTION FOR LOGON
 	if($("#caption_c-7").length > 0){
         refreshKeep();
