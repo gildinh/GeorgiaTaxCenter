@@ -10,6 +10,9 @@ $(document).ready(function () {
 		console.log("Going back from a request");
 		rndBgImage();
 		console.log("Background refreshed");
+	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length == 0){
+		refreshKeep();
+		console.log("Reloads inside login!");
 	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
         ////////////ALSO INITIAL LOAD/////////////
 		console.log("GXD located and has a hash");
