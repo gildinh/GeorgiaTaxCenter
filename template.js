@@ -4,7 +4,6 @@
 */
 
 $(document).ready(function () {
-                setTimeout(function(){
                     /////////////////Solution For VIEW ON TAP////////////////////////
                     if($('#l_n-1-2').length === 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
                         refreshKeep();
@@ -18,8 +17,6 @@ $(document).ready(function () {
                     }if(($('.SessionMessageContainer.BadWindowContainer').length > 0) || ($('.SessionMessageReturn.LoggedOffReturn').length > 0)){ 
                         rndBgImage();
                     }
-                },200);       
-              removeBGImage();
         });
 
         //Removes Background Image On HashChange//
