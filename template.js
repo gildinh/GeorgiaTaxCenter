@@ -11,41 +11,15 @@ $(document).ready(function () {
 		return false;
 		console.log("GXD was not detected");
 		}
+	
+	if(window.location.hash){
+		console.log("the has exists");
+	}else{
+		console.log("The hash doe not exist.");
+	}
+	
+	
 });
-    //Removes Background Image On HashChange//
-    //Background3 Removal and CSS change AFTER Login//
-    $(window).on('hashchange', function(){
-		if(("onhashchange" in document) === false){
-			console.log("Hash does not change");
-		}
-		
-		/////////SOLUTION FOR LOGGED OUT AND INITIAL START/////////
-		if(("onhashchange" in document) === false && $('#l_n-1-2').length > 0 && $('caption2_d-a').length > 0){
-			rndBgImage();
-			console.log("Re-adds the old background.");
-			return false;    
-        ///////////////SOLUTION FOR LOGIN/////////////////////////    
-        }if($("#caption_c-7").length > 0){
-            refreshKeep();
-			console.log("This is the new format for the login.");
-            return false;
-        ///////////////RE-ADD BACKGROUND/////////////////////////    
-        }if($('#caption2_n-7').length > 0 && $('#l_n-1-2').length > 0 && $('#caption2_d-9').length > 0){
-            rndBgImage();
-			console.log("This will re-add the background");
-			return false;
-        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
-        }if($('#l_n-1-2').length == 0){
-            $("body").css("background", "#EEE9E9");
-            return false;
-        }
-        else{
-			console.log("Else was hit");
-			rndBgImage();
-			console.log("If the hash doesnt change and page is refreshed.");
-            return true;
-        }
-    });
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
             if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
