@@ -9,11 +9,24 @@ $(window).on("load", function(){
 		rndBgImage();
 		console.log("Initial Load of Background");
 	}
+	
+	//check for navigation time API support
+if (window.performance) {
+  console.info("window.performance work's fine on this browser");
+}
+  if (performance.navigation.type == 1) {
+    console.info( "This page is reloaded" );
+  } else {
+    console.info( "This page is not reloaded");
+  }
+	
 });
 
 $(document).ready(function () {
-	
+	if(window.location.reload(){}
 	console.log("Dom is finished");
+	}
+	
 });
 
 
@@ -29,6 +42,7 @@ $(window).on('hashchange', function(){
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
+		}
 		console.log("This will keep background grey");
 		return true;
 	}else{
@@ -38,6 +52,8 @@ $(window).on('hashchange', function(){
 		return true;
 		}
 });
+
+
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
             if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
