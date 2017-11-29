@@ -11,15 +11,21 @@ $(document).ready(function () {
 		return false;
 		console.log("GXD was not detected");
 		}
-	
-	if(window.location.hash){
-		console.log("the has exists");
-	}else{
-		console.log("The hash doe not exist.");
-	}
-	
-	
 });
+    //Removes Background Image On HashChange//
+    //Background3 Removal and CSS change AFTER Login//
+    $(window).on('hashchange', function(){
+		console.log("This determines if there is a change in hash");
+        ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
+        if(window.location.hash && $('#l_n-1-2').length == 0){
+            $("body").css("background", "#EEE9E9");
+        }else{
+			console.log("Else was hit");
+			rndBgImage();
+			console.log("If the hash doesnt change and page is refreshed.");
+            return true;
+        }
+    });
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
             if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
