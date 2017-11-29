@@ -9,22 +9,14 @@ $(window).on("load", function(){
 		rndBgImage();
 		console.log("Initial Load of Background");
 	}
-	
-	//check for navigation time API support
-if (window.performance) {
-  console.info("window.performance work's fine on this browser");
-}
-  if (performance.navigation.type == 1) {
-    console.info( "This page is reloaded" );
-  } else {
-    console.info( "This page is not reloaded");
-  }
-	
 });
 
 $(document).ready(function () {
-	if(window.location.reload(){}
+	if(window.location.hash && $('#l_n-1-2').length !== 0){
+		rndBgImage();
 	console.log("Dom is finished");
+	}else{
+		$("body").css("background", "#EEE9E9");
 	}
 	
 });
