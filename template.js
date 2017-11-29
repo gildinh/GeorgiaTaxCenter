@@ -3,7 +3,11 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length == 0)
+		console.log("Going back from a request");
+		rndBgImage();
+		console.log("Background refreshed");
+	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
         ////////////ALSO INITIAL LOAD/////////////
 		console.log("GXD located and has a hash");
 		$("body").css("background", "#EEE9E9");
