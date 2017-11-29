@@ -3,15 +3,16 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	
-	if(window.location.href.indexOf("GXD") > -1 && ("onhashchange" in document) == false){
+	$(window).on('hashchange', function(){
+	if(window.location.href.indexOf("GXD") > -1 && ("onhashchange" in document) === false){
         ////////////ALSO INITIAL LOAD/////////////
 		rndBgImage();
 		console.log("Background Image Successfully Loaded");
     }else{
 		return false;
 		console.log("GXD was not detected");
-	}
+		}
+	});
  });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
