@@ -27,7 +27,6 @@ $(document).ready(function () {
 		if($("#caption_c-7").length > 0){
             refreshKeep();
             console.log("Added new format to login page.");
-			return false;
 			console.log("Solution for login found.");
         ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
         }else if(window.location.hash && $('#l_n-1-2').length == 0){
