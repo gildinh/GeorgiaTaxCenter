@@ -3,6 +3,7 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
+	rndBgImage();
 	console.log("Dom is finished");
 	
 	
@@ -12,7 +13,7 @@ $(document).on('load', function() {
 		console.log("Page refreshed.");
 	});
 $(window).on("load", function() {
-	rndBgImage();
+	$("body").css("background", "#EEE9E9");
 	console.log("window onloiad.");
 });
     //Removes Background Image On HashChange//
