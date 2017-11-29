@@ -5,9 +5,14 @@
 $(document).ready(function () {
 	console.log("Dom is finished");
 	
-	$(document).on('load', function() {
+	
+});
+
+$(document).on('load', function() {
 		console.log("Page refreshed.");
 	});
+$(window).on("load", function() {
+	console.log("window onloiad.");
 });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
