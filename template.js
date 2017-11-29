@@ -26,10 +26,11 @@ $(document).ready(function () {
         ////////////REMOVE BACKGROUND OUTSIDE LINKS//////////////
         if(window.location.hash && $('#l_n-1-2').length == 0){
             $("body").css("background", "#EEE9E9");
-        ///////////////SOLUTION FOR LOGIN/////////////////////////    
+        ///////////////SOLUTION FOR LOGIN/////////////////////////
+		console.log("Solution for login found.");
         }else if($("#caption_c-7").length > 0){
             refreshKeep();
-            return true;
+            console.log("Added new format to login page.");
 		}else{
 			console.log("Else was hit");
 			rndBgImage();
