@@ -11,8 +11,7 @@ $(document).ready(function () {
 		return false;
 		console.log("GXD was not detected");
 		}
-	});
- });
+});
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
     $(window).on('hashchange', function(){
