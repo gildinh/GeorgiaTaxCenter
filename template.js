@@ -12,6 +12,7 @@ $(document).on('load', function() {
 		console.log("Page refreshed.");
 	});
 $(window).on("load", function() {
+	rndBgImage();
 	console.log("window onloiad.");
 });
     //Removes Background Image On HashChange//
