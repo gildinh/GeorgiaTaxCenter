@@ -20,10 +20,11 @@ $(document).ready(function () {
 		refreshKeep();
 		console.log("Reloads inside login!");
 	//Should add the background for every other case. 
-    }else if(window.location.href.indexOf("GXD") > -1){
+    }else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
 		rndBgImage();
 		console.log("Background Image Successfully Loaded");
 	}else{
+		rndBgImage();
 		console.log("GXD was not detected");
 	}
 });
