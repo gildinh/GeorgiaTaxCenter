@@ -12,7 +12,7 @@ $(window).on("load", function(){
 });
 
 $(document).ready(function () {
-	if(window.location.hash && $('#l_n-1-2').length !== 0){
+	if(window.location.hash && $("#l_n-1-2").length > 0){
 		rndBgImage();
 	console.log("Dom is finished");
 	}else{
