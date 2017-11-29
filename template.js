@@ -10,20 +10,22 @@ $(document).ready(function () {
 		console.log("Going back from a request");
 		rndBgImage();
 		console.log("Background refreshed");
-	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length == 0){
-		refreshKeep();
-		console.log("Reloads inside login!");
+	//When accessing a web request outside login, it keeps the backgound grey.
 	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
-        ////////////ALSO INITIAL LOAD/////////////
 		console.log("GXD located and has a hash");
 		$("body").css("background", "#EEE9E9");
 		console.log("Keeps background grey");
+	//This reloads the new layout when inside a login.
+	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length == 0){
+		refreshKeep();
+		console.log("Reloads inside login!");
+	//Should add the background for every other case. 
     }else if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
 		console.log("Background Image Successfully Loaded");
 	}else{
 		console.log("GXD was not detected");
-		}
+	}
 });
     //Removes Background Image On HashChange//
     //Background3 Removal and CSS change AFTER Login//
