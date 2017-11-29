@@ -3,7 +3,7 @@
    as well as altering the navigation bar 
 */
 $(document).ready(function () {
-	if($("#caption_c-7").length > 0){
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $("#caption_c-7").length > 0){
         refreshKeep();
 		console.log("Page is refreshed inside a logon");
 	}else if(window.location.href.indexOf("GXD") > -1 && window.location.hash && $('#l_n-1-2').length > 0){
