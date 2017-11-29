@@ -5,10 +5,10 @@
 
 $(window).on("load", function(){
 	// Initially Loads the background images.
-	if(window.location.href.indexOf("GXD") > -1 && $('#l_n-1-2').length > -1){
+	if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
+		console.log("Initial Load of Background");
 	}
-	console.log("Initial Load of Background");
 });
 
 $(document).ready(function () {
@@ -26,14 +26,17 @@ $(window).on('hashchange', function(){
         refreshKeep();
         console.log("Added new format to login page.");
 		console.log("Solution for login found.");
+		return true;
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
 		console.log("This will keep background grey");
+		return true;
 	}else{
 		console.log("Else was hit");
 		rndBgImage();
 		console.log("If the hash doesnt change and page is refreshed.");
+		return true;
 		}
 });
         //Function that store image in array and randomly choses images.
