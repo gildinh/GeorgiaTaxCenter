@@ -8,6 +8,7 @@ $(window).on("load", function() {
 	if(window.location.href.indexOf("GXD") > -1 && $('#container_d-6').length > 0){
 		rndBgImage();
 		console.log("Initial Load of Background");
+	}
 });
 
 $(document).ready(function () {
