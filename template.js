@@ -47,7 +47,8 @@ $(window).on('hashchange', function(){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
 		}else{
-			console.log("This will not work then");
+			rndBgImage();
+			console.log("readd bg");
 		}
 		console.log("HashChange Finished");
 });
