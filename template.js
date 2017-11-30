@@ -20,6 +20,10 @@ $(document).ready(function () {
 			console.log("This will keep background grey");
 		}
 	}else{
+		console.log("Hits Else for hash");
+		rndBgImage();
+		console.log("Background loaded.");
+	}
 		// Initially Loads the background images.
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
