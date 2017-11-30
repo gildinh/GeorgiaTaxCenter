@@ -22,7 +22,7 @@ $(document).ready(function () {
         rndBgImage();    
 		console.log("Adds the Background for GXP");		
     }
-	setTimeout(function(){}
+	setTimeout(function(){
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 		console.log("This is found.");
 		}
