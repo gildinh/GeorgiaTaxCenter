@@ -23,9 +23,10 @@ $(document).ready(function () {
 		console.log("Hits Else for hash");
 		rndBgImage();
 		console.log("Background loaded.");
-		if("onhashchange" in window){
+		if(window.onhashchange){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will make background grey");
+			return true;
 		}
 	}
 });
