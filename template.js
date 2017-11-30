@@ -23,6 +23,13 @@ $(document).ready(function () {
 		console.log("Hits Else for hash");
 		rndBgImage();
 		console.log("Background loaded.");
+		if(window.location.hash && $('#l_n-1-2').length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("Outside Webrequest is Detected");
+		}else{
+			return false;
+			console.log("will return false and continue");
+		}
 	}
 		// Initially Loads the background images.
 		/*if(window.location.href.indexOf("GXD") > -1){
