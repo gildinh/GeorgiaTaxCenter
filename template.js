@@ -8,34 +8,44 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
-	// Initially Loads the background images.
-	if(window.location.href.indexOf("GXD") > -1){
-		rndBgImage();
-		console.log("Initial Load of Background");
-	}
-
-	if(window.location.hash && $("#l_n-1-2").length > 0){
-		rndBgImage();
-	console.log("Dom is finished");
+	if(window.location.hash){
+		// CHANGES THE THEME WHEN A USER LOGS IN 
+		if($("#caption_c-7").length > 0){
+        refreshKeep();
+		console.log("Added new format to login page.");
+		}
+		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
+		if($('#l_n-1-2').length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("This will keep background grey");
+		}
 	}else{
-		$("body").css("background", "#EEE9E9");
-	}	
+		// Initially Loads the background images.
+		if(window.location.href.indexOf("GXD") > -1){
+			rndBgImage();
+			console.log("Initial Load of Background");
+		}
+		
+		if(window.location.hash && $("#l_n-1-2").length > 0){
+			rndBgImage();
+		console.log("Dom is finished");
+		}else{
+			$("body").css("background", "#EEE9E9");
+		}		
+	}
 });
 
-
+/*
  //Removes Background Image On HashChange//
 //Background3 Removal and CSS change AFTER Login//
 $(window).on('hashchange', function(){
-	// SOLUTION FOR LOGON
-	if($("#caption_c-7").length > 0){
-        refreshKeep();
-        console.log("Added new format to login page.");
+	
+	
+        
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
-        $("body").css("background", "#EEE9E9");
-		console.log("This will keep background grey");
-	}
-});
+      
+});*/
 
 
         //Function that store image in array and randomly choses images.
