@@ -25,11 +25,11 @@ $(document).ready(function () {
 //Background3 Removal and CSS change AFTER Login//
 $(window).on('hashchange', function(){
 	// SOLUTION FOR LOGON
-	/*if($("#caption_c-7").length > 0){
+	if($("#caption_c-7").length > 0){
         refreshKeep();
         console.log("Added new format to login page.");
 		console.log("Solution for login found.");
-		return true;*/
+		return true;
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
