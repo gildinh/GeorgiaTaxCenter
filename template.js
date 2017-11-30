@@ -21,12 +21,9 @@ $(document).ready(function () {
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
-			return true;
 		}else{
-			return false;
 			console.log("This will not work then");
 		}
-		
 		console.log("HashChange");
 	});
 	console.log("OUtside hash change event handler");
