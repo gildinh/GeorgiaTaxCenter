@@ -24,8 +24,8 @@ $(document).ready(function () {
 		rndBgImage();
 		console.log("Background loaded.");
 	}
-	
-	$(window).on('hashchange', function(){
+});
+$(window).on('hashchange', function(){
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 				$("body").css("background", "#EEE9E9");
 				console.log("Outside Webrequest is Detected");
