@@ -37,7 +37,7 @@ $(document).ready(function () {
 	if($('#l_n-1-2').length > 0 && window.location.hash){
 		rndBgImage();
 		console.log("Background readded");
-	}else if(window.location.hash && $('#l_n-1-2').length == 0){
+	}else if(window.location.hash){
 			$("body").css("background", "#EEE9E9");
 			console.log("Makes it grey again!");
 	}
@@ -56,43 +56,14 @@ $(window).on('hashchange', function(){
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
-		}else{
-			rndBgImage();
-			console.log("readd bg");
 		}
-		console.log("HashChange Finished");
-});
-/*
-$(window).on('hashchange', function(){
-		if(window.location.hash && $('#l_n-1-2').length == 0){
-			$("body").css("background", "#EEE9E9");
-			console.log("Outside Webrequest is Detected");
-			return true;
-		// Initially Loads the background images.
-		if(window.location.href.indexOf("GXD") > -1){
-			rndBgImage();
-			console.log("Initial Load of Background");
-		}
+		$(window).on("load", function(){
+			if($("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("Refreshed loaded properly");
+		});
 		
-		if(window.location.hash && $("#l_n-1-2").length > 0){
-			rndBgImage();
-		console.log("Dom is finished");
-		}	
-		}
-});*/
-
-/*
- //Removes Background Image On HashChange//
-//Background3 Removal and CSS change AFTER Login//
-$(window).on('hashchange', function(){
-	
-	
-        
-    // REMOVES THE BACKGROUND IMAGE
-    }else if(window.location.hash && $('#l_n-1-2').length == 0){
-      
-});*/
-
+});
 
         //Function that store image in array and randomly choses images.
         function rndBgImage () {
