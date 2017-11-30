@@ -11,10 +11,14 @@ $(document).ready(function () {
 	if(window.location.hash){
 		$("body").css("background", "#EEE9E9");
 		console.log("MakesBackground Grey");
-	}else{
-		rndBgImage();
-		console.log("Adds the Background");
+	}else if(window.location.href.indexOf("GXD") > -1){
+		if(window.location.hash && $('#l_n-1-2').length > 0 ){
+			rndBgImage();
+			console.log("Adds the Background");	
+		}		
 	}
+	
+
 	console.log("Document ready is finished.");
 /*
 	if(window.location.hash){
