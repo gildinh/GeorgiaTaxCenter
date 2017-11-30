@@ -11,11 +11,9 @@ $(document).ready(function () {
 	if(window.location.hash){
 		$("body").css("background", "#EEE9E9");
 		console.log("MakesBackground Grey");
-		return false;	
 	}else{
 		rndBgImage();
 		console.log("Adds the Background");
-		return true;
 	}
 	
 	$(window).on('hashchange', function(){
