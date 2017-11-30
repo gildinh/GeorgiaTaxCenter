@@ -60,10 +60,12 @@ $(window).on('hashchange', function(){
 });
 
 $(window).on("load", function(){
+	console.log("Page Reloaded");
+	/*
 		if(window.location.hash && $("#caption_c-7").length > 0){
 			refreshKeep();
 			console.log("Refreshed loaded properly");
-		}
+		}*/
 });
 
         //Function that store image in array and randomly choses images.
