@@ -25,7 +25,7 @@ $(document).ready(function () {
 		console.log("Background loaded.");
 	}
 		// Initially Loads the background images.
-		if(window.location.href.indexOf("GXD") > -1){
+		/*if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Initial Load of Background");
 		}
@@ -33,9 +33,7 @@ $(document).ready(function () {
 		if(window.location.hash && $("#l_n-1-2").length > 0){
 			rndBgImage();
 		console.log("Dom is finished");
-		}else{
-			$("body").css("background", "#EEE9E9");
-		}		
+		}*/	
 });
 
 /*
