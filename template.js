@@ -94,10 +94,10 @@ $(window).on('hashchange', function(){
         
         //Adds the new format to the LOGIN page
         function refreshKeep() {
-                 $(".NavigationLinks").remove();
-                 $("body").css("background", "#EEE9E9");
-                 $(".PageHeaderWrapper").css({'padding-bottom' : '180px' });
-                 $(".PageWrapper").css({'margin-top' : '-130px'});
+			$('body').addClass('Login');
+			$('.PageHeaderWrapper').addClass('Login');
+			$('.PageWrapper').addClass('Login');
+			$('.NavigationLinks').addClass('Login');
         }
         
         function removeBGImage(){
