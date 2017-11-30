@@ -8,6 +8,11 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
+	$(window).on('hashchange', function(){
+		console.log("HashChange");
+	});
+	console.log("OUtside hash change event handler");
+/*
 	if(window.location.hash){
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
@@ -23,12 +28,7 @@ $(document).ready(function () {
 		console.log("Hits Else for hash");
 		rndBgImage();
 		console.log("Background loaded.");
-		if(window.onhashchange){
-			$("body").css("background", "#EEE9E9");
-			console.log("This will make background grey");
-			return true;
-		}
-	}
+	}*/
 });
 /*
 $(window).on('hashchange', function(){
