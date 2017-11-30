@@ -59,8 +59,9 @@ $(window).on('hashchange', function(){
 		}
 		$(window).on("load", function(){
 			if($("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("Refreshed loaded properly");
+				refreshKeep();
+				console.log("Refreshed loaded properly");
+			}
 		});
 		
 });
