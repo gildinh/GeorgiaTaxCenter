@@ -11,7 +11,7 @@ $(window).on("load", function(){
 	}
 });
 
-$(document).ready(function () {
+$(document).ready(function () {	
 	if(window.location.hash && $("#l_n-1-2").length > 0){
 		rndBgImage();
 	console.log("Dom is finished");
@@ -25,21 +25,16 @@ $(document).ready(function () {
 //Background3 Removal and CSS change AFTER Login//
 $(window).on('hashchange', function(){
 	// SOLUTION FOR LOGON
-	if($("#caption_c-7").length > 0){
+	/*if($("#caption_c-7").length > 0){
         refreshKeep();
         console.log("Added new format to login page.");
 		console.log("Solution for login found.");
-		return true;
+		return true;*/
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
 		console.log("This will keep background grey");
 		return true;
-	}else{
-		console.log("Else was hit");
-		rndBgImage();
-		console.log("If the hash doesnt change and page is refreshed.");
-		return false;
 	}
 });
 
