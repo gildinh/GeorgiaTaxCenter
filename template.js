@@ -33,8 +33,6 @@ $(document).ready(function () {
 				return false;
 				console.log("will return false and continue");
 			}
-	}
-	
 		// Initially Loads the background images.
 		/*if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
