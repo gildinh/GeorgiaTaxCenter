@@ -57,15 +57,15 @@ $(window).on('hashchange', function(){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
 		}
-		$(window).on("load", function(){
-			setTimeout(function(){
-			if($("#caption_c-7").length > 0){
-				refreshKeep();
-				console.log("Refreshed loaded properly");
-			}
-			}, 500)
-		});
-		
+});
+
+$(window).on("load", function(){
+		setTimeout(function(){
+		if($("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("Refreshed loaded properly");
+		}
+	}, 500)
 });
 
         //Function that store image in array and randomly choses images.
