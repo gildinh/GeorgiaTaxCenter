@@ -27,12 +27,13 @@ $(document).ready(function () {
 });
 $(window).on('hashchange', function(){
 		if(window.location.hash && $('#l_n-1-2').length == 0){
-				$("body").css("background", "#EEE9E9");
-				console.log("Outside Webrequest is Detected");
-			}else{
-				return false;
-				console.log("will return false and continue");
-			}
+			$("body").css("background", "#EEE9E9");
+			console.log("Outside Webrequest is Detected");
+			return true;
+		}else{
+			return false;
+			console.log("will return false and continue");
+		}
 		// Initially Loads the background images.
 		/*if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
