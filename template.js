@@ -30,10 +30,6 @@ $(window).on('hashchange', function(){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside Webrequest is Detected");
 			return true;
-		}else{
-			return false;
-			console.log("will return false and continue");
-		}
 		// Initially Loads the background images.
 		/*if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
