@@ -8,16 +8,22 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
-	// LOADS BACKGROUND IMAGE
+	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 	if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
-		console.log("Adds the Background");
-	}
-	// If This Exists then we are on the home page.
-	while ($('#l_n-1-2').length > 0 || (($('#l_n-1-2').length > 0)&&(window.location.hash))){
-		rndBgImage();
-		console.log("Keeps Background on Home Screen");
-	}
+		console.log("Adds the Background for GXD");
+	}else if(window.location.href.indexOf("TXT") > -1){
+        rndBgImage();
+		console.log("Adds the Background for GXT");		
+	}else if(window.location.href.indexOf("testgtc") > -1){
+        rndBgImage();  
+		console.log("Adds the Background for GXS");		
+    }else if(window.location.href.indexOf("gtc.dor") > -1){
+        rndBgImage();    
+		console.log("Adds the Background for GXP");		
+    }
+		
+	// 
 	console.log("Document ready is finished.");
 });
 
@@ -35,6 +41,10 @@ $(window).on('hashchange', function(){
 			console.log("This will not work then");
 		}
 		console.log("HashChange Finished");
+		// RE-ADD BACKGROUND
+		if(window.location.hash && $('#l_n-1-2').length > 0){
+			rndBgImage();
+		}
 });
 /*
 $(window).on('hashchange', function(){
