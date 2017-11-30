@@ -8,35 +8,25 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
-	if(window.location.hash){
-		$("body").css("background", "#EEE9E9");
-		console.log("MakesBackground Grey");
-	}else if(window.location.href.indexOf("GXD") > -1){
-		if(window.location.hash && $('#l_n-1-2').length > 0 ){
-			rndBgImage();
-			console.log("Adds the Background");	
-		}		
+	// LOADS BACKGROUND IMAGE
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
+		rndBgImage();
+		console.log("Adds the Background");
 	}
-	
-
+	// If This Exists then we are on the home page.
+	while ($('#l_n-1-2').length > 0 || (($('#l_n-1-2').length > 0)&&(window.location.hash))){
+		rndBgImage();
+		console.log("Keeps Background on Home Screen");
+	}
 	console.log("Document ready is finished.");
-/*
-	if(window.location.hash){
+});
+
+$(window).on('hashchange', function(){
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
         refreshKeep();
 		console.log("Added new format to login page.");
 		}
-		
-		
-	}else{
-		console.log("Hits Else for hash");
-		rndBgImage();
-		console.log("Background loaded.");
-	}*/
-});
-
-$(window).on('hashchange', function(){
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
