@@ -28,13 +28,10 @@ $(window).on('hashchange', function(){
 	if($("#caption_c-7").length > 0){
         refreshKeep();
         console.log("Added new format to login page.");
-		console.log("Solution for login found.");
-		return true;
     // REMOVES THE BACKGROUND IMAGE
     }else if(window.location.hash && $('#l_n-1-2').length == 0){
         $("body").css("background", "#EEE9E9");
 		console.log("This will keep background grey");
-		return true;
 	}
 });
 
