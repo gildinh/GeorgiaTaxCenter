@@ -40,6 +40,7 @@ $(window).on('hashchange', function(){
 			rndBgImage();
 		console.log("Dom is finished");
 		}*/	
+		}
 });
 
 /*
