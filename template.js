@@ -8,7 +8,27 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
-	$(document).on('hashchange', function(){
+	if(window.location.hash){
+		$("body").css("background", "#EEE9E9");
+		console.log("MakesBackground Grey");
+		return false;	
+	}else{
+		rndBgImage();
+		console.log("Adds the Background");
+		return true;
+	}
+	
+	$(window).on('hashchange', function(){
+		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
+		if($('#l_n-1-2').length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("This will keep background grey");
+			return true;
+		}else{
+			return false;
+			console.log("This will not work then");
+		}
+		
 		console.log("HashChange");
 	});
 	console.log("OUtside hash change event handler");
@@ -19,11 +39,8 @@ $(document).ready(function () {
         refreshKeep();
 		console.log("Added new format to login page.");
 		}
-		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
-		if($('#l_n-1-2').length == 0){
-			$("body").css("background", "#EEE9E9");
-			console.log("This will keep background grey");
-		}
+		
+		
 	}else{
 		console.log("Hits Else for hash");
 		rndBgImage();
