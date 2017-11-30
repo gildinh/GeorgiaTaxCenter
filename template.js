@@ -39,7 +39,7 @@ $(window).on('hashchange', function(){
 		console.log("Else was hit");
 		rndBgImage();
 		console.log("If the hash doesnt change and page is refreshed.");
-		return true;
+		return false;
 	}
 });
 
