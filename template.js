@@ -10,7 +10,12 @@ $(window).on("load", function(){
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 	if(window.location.hash){
-		console.log("There is a hash");
+		setTimeout(function(){
+			if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
+			rndBgImage();
+			console.log("Added if returns to home.");
+			}
+		}, 500)
 	}else{
 		console.log("The first was not true.");
 		if(window.location.href.indexOf("GXD") > -1){
@@ -27,13 +32,6 @@ $(document).ready(function () {
 			console.log("Adds the Background for GXP");		
 		}
 	}
-	
-	setTimeout(function(){
-	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
-		rndBgImage();
-		console.log("Added if returns to home.");
-		}
-	}, 1000)
 	
 	// Re-ADD BACKGROUND
 	if($('#l_n-1-2').length > 0 && window.location.hash){
