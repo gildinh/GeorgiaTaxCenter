@@ -25,9 +25,9 @@ $(document).ready(function () {
 	
 	setTimeout(function(){
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
-		console.log("This is found.");
+		rndBgImage();
 		}
-	}, 200);
+	}, 1000)
 	
 	// Re-ADD BACKGROUND
 	if($('#l_n-1-2').length > 0 && window.location.hash){
