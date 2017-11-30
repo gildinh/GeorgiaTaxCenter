@@ -9,7 +9,7 @@ $(window).on("load", function(){
 
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE
-	if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
+	if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
 		console.log("Adds the Background");
 	}
