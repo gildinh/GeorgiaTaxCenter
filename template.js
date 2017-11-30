@@ -58,10 +58,12 @@ $(window).on('hashchange', function(){
 			console.log("This will keep background grey");
 		}
 		$(window).on("load", function(){
+			setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				refreshKeep();
 				console.log("Refreshed loaded properly");
 			}
+			}, 500)
 		});
 		
 });
