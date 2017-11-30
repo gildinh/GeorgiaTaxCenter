@@ -9,7 +9,7 @@ $(window).on("load", function(){
 
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
-	if(window.location.href.indexOf("GXD") > -1){
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash){
 		rndBgImage();
 		console.log("Adds the Background for GXD");
 	}else if(window.location.href.indexOf("TXT") > -1){
@@ -26,6 +26,7 @@ $(document).ready(function () {
 	setTimeout(function(){
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 		rndBgImage();
+		console.log("Added if returns to home.");
 		}
 	}, 1000)
 	
