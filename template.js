@@ -8,7 +8,7 @@ $(window).on("load", function(){
 });*/
 
 $(document).ready(function () {	
-	$(window).on('hashchange', function(){
+	$(window).one('hashchange', function(){
 		console.log("HashChange");
 	});
 	console.log("OUtside hash change event handler");
