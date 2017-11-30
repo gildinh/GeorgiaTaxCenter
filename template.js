@@ -23,7 +23,16 @@ $(document).ready(function () {
 		console.log("Adds the Background for GXP");		
     }
 		
-	// 
+	// Re-ADD BACKGROUND
+	if($('#l_n-1-2').length > 0 && window.location.hash){
+		rndBgImage();
+		console.log("Background readded");
+	}else if(window.location.hash && $('#l_n-1-2').length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("Makes it grey again!");
+	}
+	
+	
 	console.log("Document ready is finished.");
 });
 
@@ -41,10 +50,6 @@ $(window).on('hashchange', function(){
 			console.log("This will not work then");
 		}
 		console.log("HashChange Finished");
-		// RE-ADD BACKGROUND
-		if(window.location.hash && $('#l_n-1-2').length > 0){
-			rndBgImage();
-		}
 });
 /*
 $(window).on('hashchange', function(){
@@ -134,11 +139,3 @@ $(window).on('hashchange', function(){
 			$('.NavigationLinks').addClass('Login');
         }
         
-        function removeBGImage(){
-            setTimeout(function(){
-                //////////////LONG DELAY FOR INSIDE LOG-IN REFRESH///////////////////
-                if($('.ManagerLogonOptionCaption.ManagerLogonOptionCaptionLogOff.ManagerLogonOptionLinkLogOff.FastEvtLogOff').length > 0){
-                        refreshKeep();
-                       }
-            }, 500);  
-        }
