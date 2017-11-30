@@ -23,15 +23,20 @@ $(document).ready(function () {
 		console.log("Hits Else for hash");
 		rndBgImage();
 		console.log("Background loaded.");
+		if("onhashchange" in window){
+			$("body").css("background", "#EEE9E9");
+			console.log("This will make background grey");
+		}
 	}
 });
+/*
 $(window).on('hashchange', function(){
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside Webrequest is Detected");
 			return true;
 		// Initially Loads the background images.
-		/*if(window.location.href.indexOf("GXD") > -1){
+		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Initial Load of Background");
 		}
@@ -39,9 +44,9 @@ $(window).on('hashchange', function(){
 		if(window.location.hash && $("#l_n-1-2").length > 0){
 			rndBgImage();
 		console.log("Dom is finished");
-		}*/	
+		}	
 		}
-});
+});*/
 
 /*
  //Removes Background Image On HashChange//
