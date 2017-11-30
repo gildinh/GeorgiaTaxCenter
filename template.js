@@ -2,16 +2,18 @@
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar 
 */
-
+/*
 $(window).on("load", function(){
+	
+});*/
+
+$(document).ready(function () {	
 	// Initially Loads the background images.
 	if(window.location.href.indexOf("GXD") > -1){
 		rndBgImage();
 		console.log("Initial Load of Background");
 	}
-});
 
-$(document).ready(function () {	
 	if(window.location.hash && $("#l_n-1-2").length > 0){
 		rndBgImage();
 	console.log("Dom is finished");
