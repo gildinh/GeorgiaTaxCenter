@@ -15,18 +15,7 @@ $(document).ready(function () {
 		rndBgImage();
 		console.log("Adds the Background");
 	}
-	
-	$(window).on('hashchange', function(){
-		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
-		if(window.location.hash && $('#l_n-1-2').length == 0){
-			$("body").css("background", "#EEE9E9");
-			console.log("This will keep background grey");
-		}else{
-			console.log("This will not work then");
-		}
-		console.log("HashChange");
-	});
-	console.log("OUtside hash change event handler");
+	console.log("Document ready is finished.");
 /*
 	if(window.location.hash){
 		// CHANGES THE THEME WHEN A USER LOGS IN 
@@ -41,6 +30,17 @@ $(document).ready(function () {
 		rndBgImage();
 		console.log("Background loaded.");
 	}*/
+});
+
+$(window).on('hashchange', function(){
+		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
+		if(window.location.hash && $('#l_n-1-2').length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("This will keep background grey");
+		}else{
+			console.log("This will not work then");
+		}
+		console.log("HashChange Finished");
 });
 /*
 $(window).on('hashchange', function(){
