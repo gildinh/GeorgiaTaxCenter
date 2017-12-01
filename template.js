@@ -53,7 +53,7 @@ $(window).on('hashchange', function(){
 		}
 });
 
-$( window ).on( "load", function() {
+$( window ).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
 	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
@@ -63,7 +63,7 @@ $( window ).on( "load", function() {
 		return true;
 	}
 		
-	}
+	
 	
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
