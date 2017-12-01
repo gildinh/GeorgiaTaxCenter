@@ -52,12 +52,16 @@ $(document).ready(function () {
 });
 */
 $(window).on("load", function(){
+	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
+		console.log("Login Button Exists");
+	}
+	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
+		console.log("Works");
+	}
 	if(window.location.hash && $('#l_n-1-1').length > 0){
 		console.log("Exisits");
 	}
-	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
-		console.log(" DOESN NOT Exisits");
-	}
+	
 });
 
 // HASHCHANGE EVENT HANDLER 
