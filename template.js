@@ -29,6 +29,7 @@ $(document).ready(function () {
 		// VIEW ON TAP SOLUTION 
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
+				$('body').addClass('Login');
 				refreshKeep();
 				console.log("View on TAP.");
 			}else{
@@ -36,27 +37,21 @@ $(document).ready(function () {
 				console.log("System continues");
 			}
 			
-			if($("#caption_c-7").length > 0){
-				$('body').addClass('Login');
-			console.log("View on TAP. so break");
-		}else{
-			return true;
-			console.log("continue");
-		}if(window.location.href.indexOf("LogOff") > -1){
-			rndBgImage();
-			console.log("User has logged off!");
-			return false;
-		}else{
-			return true;
-			console.log("Continue after loggoff");
-		}
+			if(window.location.href.indexOf("LogOff") > -1){
+				rndBgImage();
+				console.log("User has logged off!");
+				return false;
+			}else{
+				return true;
+				console.log("Continue after loggoff");
+			}
 		}, 500);
 		console.log("After SetTimeout");
 	}
 	
 	// Re-ADD BACKGROUND OUTSIDE LOGON WEBREQUEST
 	if(window.location.hash){
-		$("body").css("background", "#EEE9E9");
+		
 		return false;
 		console.log("Makes it grey again!");
 	}
