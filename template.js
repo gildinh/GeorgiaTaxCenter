@@ -36,7 +36,7 @@ $(document).ready(function () {
 				return true;
 				console.log("System continues");
 			}
-		}, 1000);
+		}, 500);
 		console.log("After SetTimeout");
 		
 		if($("#caption_c-7").length > 0){
