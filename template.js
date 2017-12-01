@@ -67,6 +67,7 @@ $(window).on('hashchange', function(){
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
 			console.log("This was hit.");
+			$("body").css("background", "#EEE9E9");
 			refreshKeep();
 			console.log("Added new format to login page.");
 			return false;
