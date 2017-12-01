@@ -20,8 +20,9 @@ $(document).ready(function () {
 		console.log("There is no initial Hash");
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("View on TAP.");
+				refreshKeep();
+				console.log("View on TAP.");
+			}
 		}, 200);
 		console.log("After SetTimeout");
 		if(window.location.href.indexOf("GXD") > -1){
