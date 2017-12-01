@@ -66,7 +66,7 @@ $(window).on("load", function(){
 });*/
 
 
-$(window.bind("load", function(){
+$(window).bind("load", function(){
 	console.log("This works");
 });
 
