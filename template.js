@@ -12,7 +12,7 @@ $( window ).on( "load", function(){
 		if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
 			console.log(" DOESN NOT Exisits");
 		}
-		if(window.location.hash && $('.Tabset').length > 0){
+		if(window.location.hash && $(".Tabset").length > 0){
 			refreshKeep();
 			console.log("Reload inside was successful!");
 		}
