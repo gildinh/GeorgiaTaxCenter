@@ -31,8 +31,16 @@ $(document).ready(function () {
 				console.log("View on TAP. so break");
 		}else{
 			return true;
+			console.log("continue");
+		}if(window.location.href.indexOf("LogOff") > -1
+			rndBgImage();
+			console.log("User has logged off!");
+			return false;
+		}else{
+			return true;
+			console.log("Continue after loggoff");
 		}
-		
+	
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Adds the Background for GXD");
