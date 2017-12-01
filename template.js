@@ -32,8 +32,11 @@ $(document).ready(function () {
 			if($("#caption_c-7").length > 0){
 				refreshKeep();
 				console.log("View on TAP.");
+			}else{
+				return true;
+				console.log("System continues");
 			}
-		}, 200);
+		
 		console.log("After SetTimeout");
 		
 		if($("#caption_c-7").length > 0){
@@ -64,6 +67,7 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
+		}, 200);
 	}
 	
 	// Re-ADD BACKGROUND
