@@ -64,7 +64,7 @@ $( window ).on( "load", function() {
 				console.log("Reload inside was successful!");
 				return false;
 			}
-		}, 1050);
+		}, 500);
 });
 
         //Function that store image in array and randomly choses images.
