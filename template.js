@@ -56,6 +56,15 @@ $(window).on('hashchange', function(){
 $( window ).on( "load", function() {
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
+	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+		console.log("One step closer");
+		return false;
+	}else{
+		return true;
+	}
+		
+	}
+	
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				console.log("Inside login reload found.");
