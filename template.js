@@ -2,10 +2,15 @@
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar 
 */
-/*
 $(window).on("load", function(){
-	
-});*/
+	console.log("Page Reloaded");
+	setTimeout(function(){
+		if(window.location.hash && $("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("Refreshed loaded properly");
+		}
+	}, 1000);
+});
 
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
@@ -89,16 +94,6 @@ $(window).on('hashchange', function(){
 			rndBgImage();
 			console.log("This should re add the background.");
 		}
-});
-
-$(window).on("load", function(){
-	console.log("Page Reloaded");
-	setTimeout(function(){
-		if(window.location.hash && $("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("Refreshed loaded properly");
-		}
-	}, 500);
 });
 
         //Function that store image in array and randomly choses images.
