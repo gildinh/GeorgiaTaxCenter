@@ -28,31 +28,6 @@ $(document).ready(function () {
 		}, 200);
 	}else{
 		console.log("There is no initial Hash");
-		setTimeout(function(){
-			if($("#caption_c-7").length > 0){
-				refreshKeep();
-				console.log("View on TAP.");
-			}else{
-				return true;
-				console.log("System continues");
-			}
-		}, 500);
-		console.log("After SetTimeout");
-		
-		if($("#caption_c-7").length > 0){
-			console.log("View on TAP. so break");
-		}else{
-			return true;
-			console.log("continue");
-		}if(window.location.href.indexOf("LogOff") > -1){
-			rndBgImage();
-			console.log("User has logged off!");
-			return false;
-		}else{
-			return true;
-			console.log("Continue after loggoff");
-		}
-	
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Adds the Background for GXD");
@@ -66,6 +41,37 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
+		
+		
+		
+		setTimeout(function(){
+			if($("#caption_c-7").length > 0){
+				refreshKeep();
+				console.log("View on TAP.");
+			}else{
+				return true;
+				console.log("System continues");
+			}
+			
+			if($("#caption_c-7").length > 0){
+			console.log("View on TAP. so break");
+		}else{
+			return true;
+			console.log("continue");
+		}if(window.location.href.indexOf("LogOff") > -1){
+			rndBgImage();
+			console.log("User has logged off!");
+			return false;
+		}else{
+			return true;
+			console.log("Continue after loggoff");
+		}
+		}, 500);
+		console.log("After SetTimeout");
+		
+		
+	
+		
 	}
 	
 	// Re-ADD BACKGROUND
