@@ -27,18 +27,9 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
-		// VIEW ON TAP SOLUTION 
-		setTimeout(function(){
-			if($("#caption_c-7").length > 0){
-				$("body").css("background", "#EEE9E9");
-				refreshKeep();
-				console.log("View on TAP.");
-			}
-		}, 250);
-		console.log("After SetTimeout");
 	}
-	
 	// RELOADS FOR INSDIE LOGIN
+	setTimeout(function(){
 	if($("#caption_c-7").length > 0){
 			console.log("Inside login reload found.");
 			$("body").css("background", "#EEE9E9");
@@ -46,6 +37,7 @@ $(document).ready(function () {
 			console.log("Reload inside was successful!");
 			return false;
 		}
+	}, 250);
 	console.log("Document ready is finished.");
 });
 
