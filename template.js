@@ -20,12 +20,19 @@ $(document).ready(function () {
 		console.log("There is no initial Hash");
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
-				$('body').addClass('Login');
 				refreshKeep();
 				console.log("View on TAP.");
 			}
 		}, 200);
 		console.log("After SetTimeout");
+		
+		if($("#caption_c-7").length > 0){
+				break;
+				console.log("View on TAP. so break");
+		}else{
+			continue;
+		}
+		
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Adds the Background for GXD");
