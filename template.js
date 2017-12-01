@@ -47,6 +47,11 @@ $(document).ready(function () {
 });
 
 $(window).on('hashchange', function(){
+		if(window.location.hash && $("#caption_c-7").length > 0){
+			console.log("This was hit.");
+			refreshKeep();
+			console.log("Reloads with the new format");
+		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
         refreshKeep();
@@ -66,7 +71,7 @@ $(window).on('hashchange', function(){
 $(window).on("load", function(){
 	console.log("Page Reloaded");
 	/*
-		if(window.location.hash && $("#caption_c-7").length > 0){
+		if(window.location.hash && $("#caption_c-7").length > 0){
 			refreshKeep();
 			console.log("Refreshed loaded properly");
 		}*/
