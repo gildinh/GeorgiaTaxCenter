@@ -27,10 +27,10 @@ $(document).ready(function () {
 		console.log("After SetTimeout");
 		
 		if($("#caption_c-7").length > 0){
-				break;
+				return false;
 				console.log("View on TAP. so break");
 		}else{
-			continue;
+			return true;
 		}
 		
 		if(window.location.href.indexOf("GXD") > -1){
