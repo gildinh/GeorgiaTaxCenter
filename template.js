@@ -12,7 +12,6 @@ $(document).ready(function () {
 			}
 		}, 200);
 	}else{
-		
 		console.log("There is no initial Hash");
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
@@ -27,7 +26,7 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
-		
+		// FUNCTIONS THAT OCCUR FOLLOWING THE BACKGROUND ADD
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				refreshKeep();
@@ -58,22 +57,16 @@ $(document).ready(function () {
 	// Re-ADD BACKGROUND OUTSIDE LOGON WEBREQUEST
 	if(window.location.hash){
 		$("body").css("background", "#EEE9E9");
-		console.log("Makes it grey again!");
 		return false;
-	}else{
-		return true;
+		console.log("Makes it grey again!");
 	}
 	console.log("Document ready is finished.");
 });
 
 $(window).on('hashchange', function(){
-		if(window.location.hash && $("#caption_c-7").length > 0){
-			console.log("This was hit.");
-			refreshKeep();
-			console.log("Reloads with the new format");
-		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
+			console.log("This was hit.");
 			refreshKeep();
 			console.log("Added new format to login page.");
 			return false;
