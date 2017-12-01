@@ -20,6 +20,7 @@ $(document).ready(function () {
 		console.log("There is no initial Hash");
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
+				$('body').addClass('Login');
 				refreshKeep();
 				console.log("View on TAP.");
 			}
