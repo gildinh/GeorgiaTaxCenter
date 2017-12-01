@@ -15,13 +15,15 @@ $(document).ready(function () {
 			rndBgImage();
 			console.log("Added if returns to home.");
 			}
-		}, 500)
-	}else if($("#caption_c-7").length > 0){
-		console.log("View on Tap detected");
-		refreshKeep();
-		console.log("New format");
+		}, 200);
 	}else{
-		console.log("The first was not true.");
+		console.log("There is no initial Hash");
+		setTimeout(function(){
+			if($("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("View on TAP.");
+		}, 200);
+		console.log("After SetTimeout");
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
 			console.log("Adds the Background for GXD");
