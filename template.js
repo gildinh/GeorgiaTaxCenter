@@ -10,7 +10,7 @@ $(document).ready(function () {
 			rndBgImage();
 			console.log("Added if returns to home.");
 			}
-		}, 250);
+		}, 200);
 	}else{
 		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 		console.log("There is no initial Hash.");
@@ -28,7 +28,12 @@ $(document).ready(function () {
 			console.log("Adds the Background for GXP");		
 		}
 	}
-	// RELOADS FOR INSDIE LOGIN
+	
+	if($("#caption_c-7").length > 0){
+		console.log("This id is found.");
+	}
+	
+	/* RELOADS FOR INSDIE LOGIN
 	setTimeout(function(){
 	if($("#caption_c-7").length > 0){
 			console.log("Inside login reload found.");
@@ -38,7 +43,7 @@ $(document).ready(function () {
 			return false;
 		}
 	}, 250);
-	console.log("Document ready is finished.");
+	console.log("Document ready is finished.");*/
 });
 
 $(window).on('hashchange', function(){
@@ -52,12 +57,15 @@ $(window).on('hashchange', function(){
 		}
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
 		if($('#l_n-1-2').length == 0){
-			$("body").css("background", "#EEE9E9");
+			//$("body").css("background", "#EEE9E9");
+			$('body').addClass('Login');
+			return false;
 			console.log("This will keep background grey");
 		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST	
 		}else{
 			console.log("The else was hit");
 			rndBgImage();
+			return false;
 			console.log("This should re add the background.");
 		}
 });
