@@ -2,9 +2,9 @@
 /* The following code handles how the site renders background images on 
    certain occasions on the homepageas well as altering the navigation bar */
 
-$(window).on( "load", function(){
+/* $(window).on( "load", function(){
         console.log( "window loaded" );
-	/* RELOADS FOR INSDIE LOGIN
+	RELOADS FOR INSDIE LOGIN
 	setTimeout(function(){
 		if(window.location.hash && $('#l_n-1-1').length > 0){
 			console.log("Exisits");
@@ -16,9 +16,9 @@ $(window).on( "load", function(){
 			refreshKeep();
 			console.log("Reload inside was successful!");
 		}
-	}, 500);*/
-});   
-   
+	}, 500);
+});   */
+/*   
 $(document).ready(function () {
 	setTimeout(function(){	
 		 if($('#l_n-1-2').length == 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
@@ -32,7 +32,7 @@ $(document).ready(function () {
 	// -- Doing this will always have the user who is logged in to refresh properly -- //
 	// Seems to be fine for loggin out as well since it removes the hash everytime. //
 	if(window.location.hash){
-		refreshKeep();
+		//refreshKeep();
 		console.log("Refreshes for inside logon");
 	}else{
 		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
@@ -49,6 +49,15 @@ $(document).ready(function () {
 		}
 	}
 	console.log("Document Finished Loading.");
+});
+*/
+$(window).bind("load", function(){
+	if(window.location.hash && $('#l_n-1-1').length > 0){
+		console.log("Exisits");
+	}
+	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+		console.log(" DOESN NOT Exisits");
+	}
 });
 
 // HASHCHANGE EVENT HANDLER 
