@@ -64,13 +64,18 @@ $(window).on("load", function(){
 	}
 	
 });*/
-
+// FRIST DOCUMENT READY TO PULL ALL FAST CODE
 $(document).ready(function(){
 	setTimeout(function(){
 		console.log("Finished");
 	}, 200);
 });
-
+// SECOND DOCUMENT READY TO CHECK DIVS ON CONTROL
+$(document).ready(function(){
+	if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
+		console.log("Login Button Exists");
+	}
+});
 
 $(window).bind("load", function(){
 	console.log("This works");
@@ -81,11 +86,9 @@ $(window).bind("load", function(){
 
 $(document).ready(function(){
 	if($('#l_n-1-1').length == 0){
-		console.log("doc Login Button Exists");
+		console.log("doc Login Button Exists");
 	}
-	if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
-		console.log("Login Button Exists");
-	}
+	
 });
 
 
