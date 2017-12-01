@@ -21,11 +21,12 @@ $(window).on( "load", function(){
    
 $(document).ready(function () {
 	setTimeout(function(){	
-		if(('onhashchange' in document) == false && $('#l_n-1-1').length == 0){
+		 if($('#l_n-1-2').length == 0 && $("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
+			$("body").css("background", "#EEE9E9");
 			refreshKeep();
 			console.log("Numba 26");
 		}
-	}, 500);
+	}, 200);
 
 	// RE-ADDS BACKGROUND WHEN THE HOME IS REFRESHED
 	if(window.location.hash){
