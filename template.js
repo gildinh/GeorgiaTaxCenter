@@ -64,6 +64,15 @@ $(window).on("load", function(){
 	}
 	
 });*/
+
+
+$(window).bind("load", function(){
+	console.log("This works");
+	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == false){
+			rndBgImage();
+			console.log("Adds the Background for GXD");
+});
+
 // FRIST DOCUMENT READY TO PULL ALL FAST CODE
 $(document).ready(function(){
 	setTimeout(function(){
@@ -73,34 +82,6 @@ $(document).ready(function(){
 		}
 	}, 200);
 });
-	
-	
-	
-
-// SECOND DOCUMENT READY TO CHECK DIVS ON CONTROL
-jQuery(function(){
-	console.log("HITS THIS ");
-   if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
-		console.log("Login Button Exists");
-	}
-});
-
-
-$(window).bind("load", function(){
-	console.log("This works");
-	if($('#l_n-1-1').length == 0){
-		console.log("Login Button Exists");
-	}
-});
-
-$(document).ready(function(){
-	if($('#l_n-1-1').length == 0){
-		console.log("doc Login Button Exists");
-	}
-	
-});
-
-
 
 // HASHCHANGE EVENT HANDLER 
 $(window).on('hashchange', function(){
