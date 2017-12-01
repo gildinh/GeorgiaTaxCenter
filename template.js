@@ -6,14 +6,17 @@ $( window ).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
 	setTimeout(function(){
-	if(window.location.hash && $('#l_n-1-1').length > 0){
-		console.log("Exisits");
-	}
-	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
-		console.log(" DOESN NOT Exisits");
-		refreshKeep();
-		console.log("Reload inside was successful!");
-	}
+		if(window.location.hash && $('#l_n-1-1').length > 0){
+			console.log("Exisits");
+		}
+		if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+			console.log(" DOESN NOT Exisits");
+		}
+		if(window.location.hash && $('.Tabset').length > 0){
+			refreshKeep();
+			console.log("Reload inside was successful!");
+		}
+	
 	}, 500);
 		/*setTimeout(function(){
 			if($("#caption_c-7").length > 0){
