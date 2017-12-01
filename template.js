@@ -68,11 +68,19 @@ $(window).on("load", function(){
 
 $(window).bind("load", function(){
 	console.log("This works");
-	if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+	if($('#l_n-1-1').length == 0){
 		console.log("Login Button Exists");
 	}
 });
 
+$(document).load(function(){
+	if($('#l_n-1-1').length == 0){
+		console.log("doc Login Button Exists");
+	}
+	if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
+		console.log("Login Button Exists");
+	}
+});
 
 
 
