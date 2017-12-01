@@ -79,7 +79,7 @@ $(window).on('hashchange', function(){
 			return false;
 		}
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
-		if(window.location.hash && $('#l_n-1-2').length == 0){
+		if($('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
 		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST	
