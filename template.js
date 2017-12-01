@@ -16,6 +16,10 @@ $(document).ready(function () {
 			console.log("Added if returns to home.");
 			}
 		}, 500)
+	}else if($("#caption_c-7").length > 0){
+		console.log("View on Tap detected");
+		refreshKeep();
+		console.log("New format");
 	}else{
 		console.log("The first was not true.");
 		if(window.location.href.indexOf("GXD") > -1){
