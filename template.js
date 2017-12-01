@@ -56,13 +56,17 @@ $(window).on('hashchange', function(){
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
+		}else{
+			console.log("The else was hit");
+			rndBgImage();
+			console.log("This should re add the background.");
 		}
 });
 
 $(window).on("load", function(){
 	console.log("Page Reloaded");
 	/*
-		if(window.location.hash && $("#caption_c-7").length > 0){
+		if(window.location.hash && $("#caption_c-7").length > 0){
 			refreshKeep();
 			console.log("Refreshed loaded properly");
 		}*/
