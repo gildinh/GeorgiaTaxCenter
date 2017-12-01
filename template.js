@@ -1,7 +1,7 @@
 //CUSTOM GA JavaScript Functionalities//
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar 
-*/
+
 $(window).on("load", function(){
 	console.log("Page Reloaded");
 	if(window.location.hash){
@@ -15,7 +15,7 @@ $(window).on("load", function(){
 		}, 1000);
 		return true;
 	}
-});
+});*/
 
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
@@ -36,12 +36,11 @@ $(document).ready(function () {
 				return true;
 				console.log("System continues");
 			}
-		
+		}, 1000);
 		console.log("After SetTimeout");
 		
 		if($("#caption_c-7").length > 0){
-				return false;
-				console.log("View on TAP. so break");
+			console.log("View on TAP. so break");
 		}else{
 			return true;
 			console.log("continue");
@@ -67,7 +66,6 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
-		}, 200);
 	}
 	
 	// Re-ADD BACKGROUND
