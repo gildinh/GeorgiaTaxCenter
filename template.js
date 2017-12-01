@@ -68,14 +68,10 @@ $(window).on("load", function(){
 $(document).ready(function(){
 	setTimeout(function(){
 		console.log("Finished");
-	}, 200);
-	// SECOND DOCUMENT READY TO CHECK DIVS ON CONTROL
-	jQuery(function(){
-		console.log("HITS THIS ");
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 		}
-	});
+	}, 200);
 });
 	
 	
