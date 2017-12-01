@@ -20,7 +20,6 @@ $(window).on("load", function(){
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 	if(window.location.hash){
-		$('body').addClass('Login');
 		setTimeout(function(){
 			if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 			rndBgImage();
@@ -68,6 +67,17 @@ $(document).ready(function () {
 		}, 500);
 		console.log("After SetTimeout");
 	}
+	
+	// Re-ADD BACKGROUND
+	if($('#l_n-1-2').length > 0 && window.location.hash){
+		rndBgImage();
+		console.log("Background readded");
+	}else if(window.location.hash){
+			$("body").css("background", "#EEE9E9");
+			console.log("Makes it grey again!");
+	}
+	
+	
 	console.log("Document ready is finished.");
 });
 
