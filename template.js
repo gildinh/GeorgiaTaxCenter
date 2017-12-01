@@ -3,14 +3,14 @@
    as well as altering the navigation bar */
 
 $(document).ready(function () {	
-
+	// RE-ADDS BACKGROUND WHEN THE HOME IS REFRESHED
 	if(window.location.hash){
 		setTimeout(function(){
 			if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 			rndBgImage();
 			console.log("Added if returns to home.");
 			}
-		}, 200);
+		}, 250);
 	}else{
 		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 		console.log("There is no initial Hash.");
@@ -37,6 +37,15 @@ $(document).ready(function () {
 		}, 250);
 		console.log("After SetTimeout");
 	}
+	
+	// RELOADS FOR INSDIE LOGIN
+	if($("#caption_c-7").length > 0){
+			console.log("Inside login reload found.");
+			$("body").css("background", "#EEE9E9");
+			refreshKeep();
+			console.log("Reload inside was successful!");
+			return false;
+		}
 	console.log("Document ready is finished.");
 });
 
