@@ -62,14 +62,15 @@ $( window ).on( "load", function(){
 	}
 	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
 		console.log(" DOESN NOT Exisits");
+		refreshKeep();
+		console.log("Reload inside was successful!");
 	}
 	}, 500);
 		/*setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				console.log("Inside login reload found.");
 				$("body").css("background", "#EEE9E9");
-				refreshKeep();
-				console.log("Reload inside was successful!");
+				
 				return false;
 			}
 		}, 500);*/
