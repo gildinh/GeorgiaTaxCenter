@@ -32,7 +32,7 @@ $(document).ready(function () {
 		}else{
 			return true;
 			console.log("continue");
-		}if(window.location.href.indexOf("LogOff") > -1
+		}if(window.location.href.indexOf("LogOff") > -1){
 			rndBgImage();
 			console.log("User has logged off!");
 			return false;
