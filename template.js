@@ -98,7 +98,7 @@ $(window).on("load", function(){
 			refreshKeep();
 			console.log("Refreshed loaded properly");
 		}
-	}, 200);
+	}, 500);
 });
 
         //Function that store image in array and randomly choses images.
