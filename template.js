@@ -28,22 +28,6 @@ $(document).ready(function () {
 			console.log("Adds the Background for GXP");		
 		}
 	}
-	
-	if($("#caption_c-7").length > 0){
-		console.log("This id is found.");
-	}
-	
-	/* RELOADS FOR INSDIE LOGIN
-	setTimeout(function(){
-	if($("#caption_c-7").length > 0){
-			console.log("Inside login reload found.");
-			$("body").css("background", "#EEE9E9");
-			refreshKeep();
-			console.log("Reload inside was successful!");
-			return false;
-		}
-	}, 250);
-	console.log("Document ready is finished.");*/
 });
 
 $(window).on('hashchange', function(){
@@ -68,6 +52,21 @@ $(window).on('hashchange', function(){
 			return false;
 			console.log("This should re add the background.");
 		}
+});
+
+$( window ).on( "load", function() {
+        console.log( "window loaded" );
+		/* RELOADS FOR INSDIE LOGIN
+	setTimeout(function(){
+	if($("#caption_c-7").length > 0){
+			console.log("Inside login reload found.");
+			$("body").css("background", "#EEE9E9");
+			refreshKeep();
+			console.log("Reload inside was successful!");
+			return false;
+		}
+	}, 250);
+	console.log("Document ready is finished.");*/
 });
 
         //Function that store image in array and randomly choses images.
