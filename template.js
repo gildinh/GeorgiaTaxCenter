@@ -14,6 +14,12 @@ $(document).ready(function () {
 	}else{
 		console.log("There is no initial Hash");
 		if(window.location.href.indexOf("GXD") > -1){
+			if($("#caption_c-7").length > 0){
+				$("body").css("background", "#EEE9E9");
+				refreshKeep();
+				console.log("View on Tap is located");
+				return false;
+			}
 			rndBgImage();
 			console.log("Adds the Background for GXD");
 		}else if(window.location.href.indexOf("TXT") > -1){
