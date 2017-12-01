@@ -57,10 +57,10 @@ $( window ).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
 	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
-		return true;
-	}else{
-		refreshKeep();
-		return true;
+		console.log("Exisits");
+	}
+	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+		console.log(" DOESN NOT Exisits");
 	}
 		/*setTimeout(function(){
 			if($("#caption_c-7").length > 0){
