@@ -71,6 +71,7 @@ $(window).bind("load", function(){
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == false){
 			rndBgImage();
 			console.log("Adds the Background for GXD");
+	}
 });
 
 // FRIST DOCUMENT READY TO PULL ALL FAST CODE
