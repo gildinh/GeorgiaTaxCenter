@@ -51,6 +51,7 @@ $(document).ready(function () {
 	console.log("Document Finished Loading.");
 });
 */
+/*
 $(window).on("load", function(){
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 		console.log("Login Button Exists");
@@ -62,7 +63,15 @@ $(window).on("load", function(){
 		console.log("Exisits");
 	}
 	
-});
+});*/
+
+
+$(window.bind("load", function(){
+	console.log("This works");
+}
+
+
+
 
 // HASHCHANGE EVENT HANDLER 
 $(window).on('hashchange', function(){
