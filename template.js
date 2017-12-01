@@ -57,14 +57,12 @@ $(document).ready(function () {
 	
 	// Re-ADD BACKGROUND OUTSIDE LOGON WEBREQUEST
 	if(window.location.hash){
-			$("body").css("background", "#EEE9E9");
-			console.log("Makes it grey again!");
-			return false;
+		$("body").css("background", "#EEE9E9");
+		console.log("Makes it grey again!");
+		return false;
 	}else{
 		return true;
 	}
-	
-	
 	console.log("Document ready is finished.");
 });
 
@@ -76,13 +74,15 @@ $(window).on('hashchange', function(){
 		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
-        refreshKeep();
-		console.log("Added new format to login page.");
+			refreshKeep();
+			console.log("Added new format to login page.");
+			return false;
 		}
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
 		if(window.location.hash && $('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
+		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST	
 		}else{
 			console.log("The else was hit");
 			rndBgImage();
