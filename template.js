@@ -65,9 +65,11 @@ $(window).on("load", function(){
 	
 });*/
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
-  });
+$(document).ready(function(){
+	setTimeout(function(){
+		console.log("Finished");
+	}, 200);
+});
 
 
 $(window).bind("load", function(){
@@ -79,7 +81,7 @@ $(window).bind("load", function(){
 
 $(document).ready(function(){
 	if($('#l_n-1-1').length == 0){
-		console.log("doc Login Button Exists");
+		console.log("doc Login Button Exists");
 	}
 	if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 		console.log("Login Button Exists");
