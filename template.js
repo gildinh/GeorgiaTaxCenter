@@ -56,7 +56,7 @@ $(window).on('hashchange', function(){
 $( window ).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
-	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
+	if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
 		console.log("One step closer");
 		refreshKeep();
 		console.log("Reload inside was successful!");
