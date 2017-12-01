@@ -5,12 +5,15 @@
 $(window).on("load", function(){
 	console.log("Page Reloaded");
 	if(window.location.hash){
-	setTimeout(function(){
+		console.log("Nope.");
+	}else{
+		setTimeout(function(){
 		if(window.location.hash && $("#caption_c-7").length > 0){
 			refreshKeep();
 			console.log("Refreshed loaded properly");
 			}
 		}, 1000);
+		return true;
 	}
 });
 
