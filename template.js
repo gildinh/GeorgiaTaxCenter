@@ -56,12 +56,10 @@ $(window).on('hashchange', function(){
 $( window ).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
-	if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
-		console.log("One step closer");
-		refreshKeep();
-		console.log("Reload inside was successful!");
-		return false;
+	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
+		return true;
 	}else{
+		refreshKeep();
 		return true;
 	}
 		/*setTimeout(function(){
