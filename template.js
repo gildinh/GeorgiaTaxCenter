@@ -52,6 +52,7 @@ $(document).ready(function () {
 			}
 			
 			if($("#caption_c-7").length > 0){
+				$('body').addClass('Login');
 			console.log("View on TAP. so break");
 		}else{
 			return true;
