@@ -26,7 +26,7 @@ $(document).ready(function () {
 			rndBgImage();    
 			console.log("Adds the Background for GXP");		
 		}
-		// FUNCTIONS THAT OCCUR FOLLOWING THE BACKGROUND ADD
+		// VIEW ON TAP SOLUTION 
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				refreshKeep();
@@ -59,6 +59,20 @@ $(document).ready(function () {
 		$("body").css("background", "#EEE9E9");
 		return false;
 		console.log("Makes it grey again!");
+	}
+	
+	// VIEW ON TAP SOLUTION
+	if(window.location.hash){
+		console.log("View on Tap");
+	}else{
+		if($("#caption_c-7").length > 0){
+			console.log("This was hit.");
+			$("body").css("background", "#EEE9E9");
+			refreshKeep();
+			console.log("Added new format to login page.");
+			return false;
+		}
+		return false;
 	}
 	console.log("Document ready is finished.");
 });
