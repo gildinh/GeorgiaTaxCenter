@@ -69,13 +69,26 @@ $(document).ready(function(){
 	setTimeout(function(){
 		console.log("Finished");
 	}, 200);
+	// SECOND DOCUMENT READY TO CHECK DIVS ON CONTROL
+	jQuery(function(){
+		console.log("HITS THIS ");
+		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
+			console.log("Login Button Exists");
+		}
+	});
 });
+	
+	
+	
+
 // SECOND DOCUMENT READY TO CHECK DIVS ON CONTROL
-$(document).ready(function(){
-	if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
+jQuery(function(){
+	console.log("HITS THIS ");
+   if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 		console.log("Login Button Exists");
 	}
 });
+
 
 $(window).bind("load", function(){
 	console.log("This works");
