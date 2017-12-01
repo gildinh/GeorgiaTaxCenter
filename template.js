@@ -58,14 +58,13 @@ $( window ).on( "load", function(){
 	// RELOADS FOR INSDIE LOGIN
 	if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
 		console.log("One step closer");
+		refreshKeep();
+		console.log("Reload inside was successful!");
 		return false;
 	}else{
 		return true;
 	}
-		
-	
-	
-		setTimeout(function(){
+		/*setTimeout(function(){
 			if($("#caption_c-7").length > 0){
 				console.log("Inside login reload found.");
 				$("body").css("background", "#EEE9E9");
@@ -73,7 +72,7 @@ $( window ).on( "load", function(){
 				console.log("Reload inside was successful!");
 				return false;
 			}
-		}, 500);
+		}, 500);*/
 });
 
         //Function that store image in array and randomly choses images.
