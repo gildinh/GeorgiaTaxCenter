@@ -29,7 +29,7 @@ $(document).ready(function () {
 		// VIEW ON TAP SOLUTION 
 		setTimeout(function(){
 			if($("#caption_c-7").length > 0){
-				$('body').addClass('Login');
+				$("body").css("background", "#EEE9E9");
 				refreshKeep();
 				console.log("View on TAP.");
 			}else{
