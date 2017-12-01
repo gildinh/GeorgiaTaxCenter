@@ -51,7 +51,7 @@ $(document).ready(function () {
 	console.log("Document Finished Loading.");
 });
 */
-$(window).bind("load", function(){
+$(window).on("load", function(){
 	if(window.location.hash && $('#l_n-1-1').length > 0){
 		console.log("Exisits");
 	}
