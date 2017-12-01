@@ -73,7 +73,7 @@ $(window).bind("load", function(){
 	}
 });
 
-$(document).load(function(){
+$(document).ready(function(){
 	if($('#l_n-1-1').length == 0){
 		console.log("doc Login Button Exists");
 	}
