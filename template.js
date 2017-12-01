@@ -3,7 +3,7 @@
    as well as altering the navigation bar */
 
 $(document).ready(function () {	
-	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
+
 	if(window.location.hash){
 		setTimeout(function(){
 			if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
@@ -12,14 +12,9 @@ $(document).ready(function () {
 			}
 		}, 200);
 	}else{
-		console.log("There is no initial Hash");
+		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
+		console.log("There is no initial Hash.");
 		if(window.location.href.indexOf("GXD") > -1){
-			if($("#caption_c-7").length > 0){
-				$("body").css("background", "#EEE9E9");
-				refreshKeep();
-				console.log("View on Tap is located");
-				return false;
-			}
 			rndBgImage();
 			console.log("Adds the Background for GXD");
 		}else if(window.location.href.indexOf("TXT") > -1){
@@ -38,42 +33,9 @@ $(document).ready(function () {
 				$("body").css("background", "#EEE9E9");
 				refreshKeep();
 				console.log("View on TAP.");
-			}else{
-				return true;
-				console.log("System continues");
 			}
-			
-			if(window.location.href.indexOf("LogOff") > -1){
-				rndBgImage();
-				console.log("User has logged off!");
-				return false;
-			}else{
-				return true;
-				console.log("Continue after loggoff");
-			}
-		}, 500);
+		}, 250);
 		console.log("After SetTimeout");
-	}
-	
-	// Re-ADD BACKGROUND OUTSIDE LOGON WEBREQUEST
-	if(window.location.hash){
-		
-		return false;
-		console.log("Makes it grey again!");
-	}
-	
-	// VIEW ON TAP SOLUTION
-	if(window.location.hash){
-		console.log("View on Tap");
-	}else{
-		if($("#caption_c-7").length > 0){
-			console.log("This was hit.");
-			$("body").css("background", "#EEE9E9");
-			refreshKeep();
-			console.log("Added new format to login page.");
-			return false;
-		}
-		return false;
 	}
 	console.log("Document ready is finished.");
 });
