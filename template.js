@@ -56,17 +56,16 @@ $(window).on('hashchange', function(){
 
 $( window ).on( "load", function() {
         console.log( "window loaded" );
-		/* RELOADS FOR INSDIE LOGIN
-	setTimeout(function(){
-	if($("#caption_c-7").length > 0){
-			console.log("Inside login reload found.");
-			$("body").css("background", "#EEE9E9");
-			refreshKeep();
-			console.log("Reload inside was successful!");
-			return false;
-		}
-	}, 250);
-	console.log("Document ready is finished.");*/
+	// RELOADS FOR INSDIE LOGIN
+		setTimeout(function(){
+			if($("#caption_c-7").length > 0){
+				console.log("Inside login reload found.");
+				$("body").css("background", "#EEE9E9");
+				refreshKeep();
+				console.log("Reload inside was successful!");
+				return false;
+			}
+		}, 250);
 });
 
         //Function that store image in array and randomly choses images.
