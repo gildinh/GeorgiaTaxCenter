@@ -1,21 +1,6 @@
 //CUSTOM GA JavaScript Functionalities//
 /*The following code handles how the site renders background images on certain occasions on the homepage
-   as well as altering the navigation bar 
-
-$(window).on("load", function(){
-	console.log("Page Reloaded");
-	if(window.location.hash){
-		console.log("Nope.");
-	}else{
-		setTimeout(function(){
-		if(window.location.hash && $("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("Refreshed loaded properly");
-			}
-		}, 1000);
-		return true;
-	}
-});*/
+   as well as altering the navigation bar */
 
 $(document).ready(function () {	
 	// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
@@ -27,6 +12,7 @@ $(document).ready(function () {
 			}
 		}, 200);
 	}else{
+		
 		console.log("There is no initial Hash");
 		if(window.location.href.indexOf("GXD") > -1){
 			rndBgImage();
@@ -69,13 +55,13 @@ $(document).ready(function () {
 		console.log("After SetTimeout");
 	}
 	
-	// Re-ADD BACKGROUND
-	if($('#l_n-1-2').length > 0 && window.location.hash){
-		rndBgImage();
-		console.log("Background readded");
-	}else if(window.location.hash){
+	// Re-ADD BACKGROUND OUTSIDE LOGON WEBREQUEST
+	if(window.location.hash){
 			$("body").css("background", "#EEE9E9");
 			console.log("Makes it grey again!");
+			return false;
+	}else{
+		return true;
 	}
 	
 	
