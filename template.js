@@ -29,9 +29,11 @@ $(document).ready(function () {
 	}, 200);
 
 	// RE-ADDS BACKGROUND WHEN THE HOME IS REFRESHED
+	// -- Doing this will always have the user who is logged in to refresh properly -- //
+	// Seems to be fine for loggin out as well since it removes the hash everytime. //
 	if(window.location.hash){
 		refreshKeep();
-		console.log("Will this ever execute?");
+		console.log("Refreshes for inside logon");
 	}else{
 		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 		console.log("There is no initial Hash.");
@@ -51,24 +53,29 @@ $(document).ready(function () {
 
 // HASHCHANGE EVENT HANDLER 
 $(window).on('hashchange', function(){
+		if(('onhashchange' in document) == false && $("#caption_c-7").length > 0){
+			console.log("This works");
+		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
 		if($("#caption_c-7").length > 0){
 			$("body").css("background", "#EEE9E9");
 			refreshKeep();
-			return false;
 			console.log("Added new format to login page.");
+			return false;
 		}
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
 		if($('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
-			return false;
 			console.log("This will keep background grey");
+			return false;
 		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST	
 		}else{
 			rndBgImage();
-			return false;
 			console.log("This should re add the background.");
+			return false;
 		}
+		
+		
 });
 
 //Function that store image in array and randomly choses images.
