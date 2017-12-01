@@ -2,7 +2,7 @@
 /*The following code handles how the site renders background images on certain occasions on the homepage
    as well as altering the navigation bar */
 
-$( window ).on( "load", function(){
+$(window).on( "load", function(){
         console.log( "window loaded" );
 	// RELOADS FOR INSDIE LOGIN
 	setTimeout(function(){
@@ -12,7 +12,7 @@ $( window ).on( "load", function(){
 		if(window.location.hash && $('#d-8.DocFieldButton.FastEvtLinkClick').length == 0){
 			console.log(" DOESN NOT Exisits");
 		}
-		if(window.location.hash && $(".Tabset").length > 0){
+		if(window.location.hash && $('ul.Tabset').length > 0){
 			refreshKeep();
 			console.log("Reload inside was successful!");
 		}
@@ -20,7 +20,7 @@ $( window ).on( "load", function(){
 	}, 500);
 		/*setTimeout(function(){
 			if($("#caption_c-7").length > 0){
-				console.log("Inside login reload found.");
+				console.log("Inside login reload found.");
 				$("body").css("background", "#EEE9E9");
 				
 				return false;
@@ -31,12 +31,8 @@ $( window ).on( "load", function(){
 $(document).ready(function () {	
 	// RE-ADDS BACKGROUND WHEN THE HOME IS REFRESHED
 	if(window.location.hash){
-		setTimeout(function(){
-			if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
-			rndBgImage();
-			console.log("Added if returns to home.");
-			}
-		}, 200);
+		refreshKeep();
+		console.log("Will this ever execute?");
 	}else{
 		// LOADS BACKGROUND IMAGE FOR DIFFERENT ENVIRONMENTS
 		console.log("There is no initial Hash.");
