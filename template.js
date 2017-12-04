@@ -79,12 +79,12 @@ $(window).bind("load", function(){
 });
 
 // FRIST DOCUMENT READY TO PULL ALL FAST CODE
-$(document).ready(function(){
+$(document).ready(function
 	setTimeout(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 			return false;
-		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
+		}else if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
 			refreshKeep();
 			console.log("Code when logged in.");
 			return false;
@@ -97,16 +97,17 @@ $(window).on('hashchange', function(){
 		if(('onhashchange' in document) == false && $("#caption_c-7").length > 0){
 			refreshKeep();
 			console.log("This works");
+			return false;
 		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
-		if($("#caption_c-7").length > 0 && ($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0)){
+		else if($("#caption_c-7").length > 0 && ($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0)){
 			$("body").css("background", "#EEE9E9");
 			refreshKeep();
 			console.log("Added new format to login page.");
 			return false;
 		}
 		// REMOVES THE BACKGROUND OUTSIDE A LOGIN
-		if($('#l_n-1-2').length == 0){
+		else if($('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
 			return false;
@@ -116,6 +117,14 @@ $(window).on('hashchange', function(){
 			console.log("This should re add the background.");
 			return false;
 		}
+});
+
+$(window).on('load', function(){
+	console.log("Hello world");
+	if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
+		console.log("document loaded and found element");
+		return false;
+	}
 });
 
 //Function that store image in array and randomly choses images.
