@@ -84,7 +84,7 @@ $(document).ready(function(){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside login");
 			return false;
-		if(window.location.href.indexOf("LogOff") > -1){
+		}if(window.location.href.indexOf("LogOff") > -1){
 			rndBgImage();
 			console.log("This handles the event for adding BG when  user logs off");
 			return false;
