@@ -138,6 +138,13 @@ $(window).on('hashchange', function(){
 
 $(window).ready(function(){
 	console.log("All elements should be loaded now.");
+	
+	if("onhashchange" in window){
+		console.log("the hash has changed in the window.");
+	}else{
+		console.log("there is no hashchange in window");
+	}
+	
 });
 
 
