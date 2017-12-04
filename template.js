@@ -66,7 +66,7 @@ $(window).on("load", function(){
 });*/
 
 
-$(window).bind("load", function(){
+$(window).on("load", function(){
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == true){
 		$("body").css("background", "#EEE9E9");
 		console.log("Outside request grey");
@@ -90,6 +90,13 @@ $(document).ready(function
 			return false;
 		}
 	}, 200);
+});
+
+$(window).on( "load", function() {
+	if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
+		console.log("document loaded and found element");
+		return false;
+	}
 });
 
 // HASHCHANGE EVENT HANDLER 
@@ -117,14 +124,6 @@ $(window).on('hashchange', function(){
 			console.log("This should re add the background.");
 			return false;
 		}
-});
-
-$(window).on('load', function(){
-	console.log("Hello world");
-	if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
-		console.log("document loaded and found element");
-		return false;
-	}
 });
 
 //Function that store image in array and randomly choses images.
