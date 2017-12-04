@@ -129,10 +129,17 @@ $(window).on('hashchange', function(){
 });*/
 
 $(window).on("load", function(){
+	setTimeout(function(){
 	if(window.location.hash == ''){
 		rndBgImage();
 		console.log("Backgroung to load when there is no hash.");
-	}
+		return false;
+	}if($("#caption_c-7").length > 0 && window.location.hash !== ''){
+		refreshKeep();
+		return false;
+	}	
+	},200);
+	
 });
 
 $(window).on('hashchange', function(){
@@ -150,19 +157,10 @@ $(window).on('hashchange', function(){
 	}else{return true;}
 });
 
-$(window).ready(function(){
-	console.log("All elements should be loaded now.");
-	
-	setTimeout(function(){
-		if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
-	},200);
+$(window).ready(function(){	
 });
 
 $(document).ready(function(){
-	console.log("Recording the document ready");
-	setTimeout(function(){
-		if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
-	},200);
 });
 
 //Function that store image in array and randomly choses images.
