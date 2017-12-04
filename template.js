@@ -140,7 +140,7 @@ $(window).on('hashchange', function(){
 		removeBGI();
 		console.log("Outside request will remove image.");
 		return false;
-	elses{return true;}
+	else{return true;}
 
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 		rndBgImage();
