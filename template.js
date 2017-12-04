@@ -134,7 +134,6 @@ $(window).on("load", function(){
 
 $(window).on('hashchange', function(){
 	console.log("hash has changed");
-	if()
 });
 
 $(window).ready(function(){
