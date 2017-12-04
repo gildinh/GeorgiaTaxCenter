@@ -135,7 +135,7 @@ $(window).on("load", function(){
 	}
 });
 
-$(window).on('hashchange', function(){
+$(window).one('hashchange', function(){
 	removeBGI();
 	console.log("Outside request will remove image.");
 });
