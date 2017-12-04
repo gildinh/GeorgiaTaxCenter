@@ -84,7 +84,8 @@ $(document).ready(function(){
 		console.log("Finished");
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
-		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
+			return false;
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && windows.location.hash){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside login");
 			return false;
@@ -120,8 +121,6 @@ $(window).on('hashchange', function(){
 			console.log("This should re add the background.");
 			return false;
 		}
-		
-		
 });
 
 //Function that store image in array and randomly choses images.
