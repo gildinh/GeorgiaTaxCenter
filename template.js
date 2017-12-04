@@ -90,8 +90,8 @@ $(document).ready(function(){
 			console.log("Login Button Exists");
 			return false;
 		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
-			$("body").css("background", "#EEE9E9");
-			console.log("Outside login");
+			refreshKeep();
+			console.log("Code when logged in.");
 			return false;
 		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && $("#caption_c-7").length > 0){
 			refreshKeep();
