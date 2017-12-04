@@ -4,11 +4,6 @@
 
 $(window).on("load", function(){
 	setTimeout(function(){
-		if($("#caption_c-7").length > 0 && window.location.hash !== ''){
-			refreshKeep();
-			return false;
-			console.log("refreshkeep");
-		}
 		// Solution for View on Tap
 		if(window.location.hash == '' && $("#caption_c-7").length > 0){
 			refreshKeep();
@@ -18,7 +13,6 @@ $(window).on("load", function(){
 			rndBgImage();
 			console.log("Backgroung to load when there is no hash.");
 			return false;
-		// keep refresh format
 		}
 	},200);
 });
@@ -26,9 +20,13 @@ $(window).on("load", function(){
 $(window).on("load", function(){
 	setTimeout(function(){
 		console.log("Second Load function");
+		if($("#caption_c-7").length > 0 && window.location.hash !== ''){
+			refreshKeep();
+			return false;
+			console.log("refreshkeep");
+		}
 	},500);
 });
-
 
 $(window).on('hashchange', function(){
 	// New Login Format
