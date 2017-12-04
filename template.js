@@ -81,12 +81,17 @@ $(document).ready(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 		}
+		if(window.location.hash && ){
+		
+		}
+		
 	}, 200);
 });
 
 // HASHCHANGE EVENT HANDLER 
 $(window).on('hashchange', function(){
 		if(('onhashchange' in document) == false && $("#caption_c-7").length > 0){
+			refreshKeep();
 			console.log("This works");
 		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
@@ -101,7 +106,11 @@ $(window).on('hashchange', function(){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
 			return false;
-		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST	
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
+			refreshKeep();
+			console.log("Outside login");
+			return false;
+		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST		
 		}else{
 			rndBgImage();
 			console.log("This should re add the background.");
