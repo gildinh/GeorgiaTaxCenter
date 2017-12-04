@@ -85,7 +85,6 @@ $(window).bind("load", function(){
 // FRIST DOCUMENT READY TO PULL ALL FAST CODE
 $(document).ready(function(){
 	setTimeout(function(){
-		console.log("Finished");
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 			return false;
@@ -104,7 +103,7 @@ $(window).on('hashchange', function(){
 			console.log("This works");
 		}
 		// CHANGES THE THEME WHEN A USER LOGS IN 
-		if($("#caption_c-7").length > 0){
+		if($("#caption_c-7").length > 0 && ($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0)){
 			$("body").css("background", "#EEE9E9");
 			refreshKeep();
 			console.log("Added new format to login page.");
