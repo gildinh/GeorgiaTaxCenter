@@ -4,6 +4,11 @@
 
 $(window).on("load", function(){
 	setTimeout(function(){
+		if($("#caption_c-7").length > 0 && window.location.hash !== ''){
+			refreshKeep();
+			return false;
+			console.log("refreshkeep");
+		}
 		// Solution for View on Tap
 		if(window.location.hash == '' && $("#caption_c-7").length > 0){
 			refreshKeep();
@@ -14,11 +19,7 @@ $(window).on("load", function(){
 			console.log("Backgroung to load when there is no hash.");
 			return false;
 		// keep refresh format
-		}if($("#caption_c-7").length > 0 && window.location.hash !== ''){
-			refreshKeep();
-			return false;
-			console.log("refreshkeep");
-		}	
+		}
 	},200);
 	
 });
