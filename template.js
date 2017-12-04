@@ -93,10 +93,12 @@ $(document).ready(function(){
 });
 
 $(window).on( "load", function() {
+	setTimeout(function(){
 	if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
 		console.log("document loaded and found element");
 		return false;
 	}
+	}, 200);
 });
 
 // HASHCHANGE EVENT HANDLER 
