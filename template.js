@@ -134,20 +134,17 @@ $(window).on("load", function(){
 
 $(window).on('hashchange', function(){
 	console.log("hash has changed");
+	if()
 });
 
 $(window).ready(function(){
 	console.log("All elements should be loaded now.");
 	
-	if("onhashchange" in window){
-		console.log("the hash has changed in the window.");
-	}else{
-		console.log("there is no hashchange in window");
-	}
-	
 });
 
-
+$(document).ready(function(){
+	console.log("Recording the document ready");
+});
 
 //Function that store image in array and randomly choses images.
 function rndBgImage () {
