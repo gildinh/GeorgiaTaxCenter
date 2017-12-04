@@ -136,12 +136,9 @@ $(window).on("load", function(){
 });
 
 $(window).on('hashchange', function(){
-	if(("onhashchange") in document){
-		removeBGI();
-		console.log("Outside request will remove image.");
-		return false;
-	}
-	
+	removeBGI();
+	console.log("Outside request will remove image.");
+
 	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
 		rndBgImage();
 		console.log("Checks for the Login Div and re-adds background");
