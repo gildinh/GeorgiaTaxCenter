@@ -65,8 +65,20 @@ $(window).on("load", function(){
 	
 });*/
 
-
 $(window).on("load", function(){
+	if(window.location.href.indexOf("GXD") > -1	&& 
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == true){
 		$("body").css("background", "#EEE9E9");
 		console.log("Outside request grey");
@@ -82,9 +94,10 @@ $(window).on("load", function(){
 $(document).ready(function(){
 	setTimeout(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
+			rndBgImage();
 			console.log("Login Button Exists");
 			return false;
-		}else if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
 			refreshKeep();
 			console.log("Code when logged in.");
 			return false;
@@ -126,6 +139,11 @@ $(window).on('hashchange', function(){
 			console.log("This should re add the background.");
 			return false;
 		}
+});
+
+$(window).bind("popstate", function () {
+  $.getScript(location.href);
+	console.log("Back Button is detected");
 });
 
 //Function that store image in array and randomly choses images.
