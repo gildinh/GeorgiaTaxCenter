@@ -85,7 +85,7 @@ $(document).ready(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 			return false;
-		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && windows.location.hash){
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && window.location.hash){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside login");
 			return false;
