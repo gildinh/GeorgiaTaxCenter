@@ -138,11 +138,12 @@ $(window).on('hashchange', function(){
 
 $(window).ready(function(){
 	console.log("All elements should be loaded now.");
-	
+	if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
 });
 
 $(document).ready(function(){
 	console.log("Recording the document ready");
+	if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
 });
 
 //Function that store image in array and randomly choses images.
