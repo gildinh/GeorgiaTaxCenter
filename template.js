@@ -130,7 +130,8 @@ $(window).on('hashchange', function(){
 
 $(window).on("load", function(){
 	if(window.location.hash == ''){
-		console.log("Checks if there is Hash or not.");
+		rndBgImage();
+		console.log("Backgroung to load when there is no hash.");
 	}
 });
 
@@ -202,10 +203,5 @@ function rndBgImage () {
 }
         
 //Adds the new format to the LOGIN page
-function refreshKeep() {
-	$('body').addClass('Login');
-	$('.PageHeaderWrapper').addClass('Login');
-	$('.PageWrapper').addClass('Login');
-	$('.NavigationLinks').addClass('Login');
-}
+function refreshKeep() { $('body').addClass('Login'); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
         
