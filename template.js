@@ -79,7 +79,7 @@ $(window).on("load", function(){
 });
 
 // FRIST DOCUMENT READY TO PULL ALL FAST CODE
-$(document).ready(function
+$(document).ready(function(){
 	setTimeout(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
