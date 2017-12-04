@@ -69,8 +69,11 @@ $(window).on("load", function(){
 $(window).bind("load", function(){
 	console.log("This works");
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == false){
-			rndBgImage();
-			console.log("Adds the Background for GXD");
+		rndBgImage();
+		console.log("Adds the Background for GXD");
+	}if(window.location.href.indexOf("LogOff") > -1){
+		rndBgImage();
+		console.log("This handles the event for adding BG when  user logs off");
 	}
 });
 
@@ -83,6 +86,10 @@ $(document).ready(function(){
 		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside login");
+			return false;
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && $("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("Handles refresh for inside login");
 			return false;
 		}
 	}, 200);
