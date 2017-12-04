@@ -119,7 +119,7 @@ $(window).on('hashchange', function(){
 		}
 });
 
-$(window).on('load', function(){
+$(window).load(function(){
 	console.log("Hello world");
 	if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
 		console.log("document loaded and found element");
