@@ -140,6 +140,14 @@ $(window).one('hashchange', function(){
 	console.log("Outside request will remove image.");
 });
 
+$(window).on('hashchange', function(){
+	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0){
+		rndBgImage();
+		console.log("Checks for the Login Div and re-adds background");
+		return false;
+	}else{return true;}
+});
+
 $(window).ready(function(){
 	console.log("All elements should be loaded now.");
 	
