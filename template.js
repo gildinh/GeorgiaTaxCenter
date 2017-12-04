@@ -21,8 +21,14 @@ $(window).on("load", function(){
 		// keep refresh format
 		}
 	},200);
-	
 });
+
+$(window).on("load", function(){
+	setTimeout(function(){
+		console.log("Second Load function");
+	},500);
+});
+
 
 $(window).on('hashchange', function(){
 	// New Login Format
