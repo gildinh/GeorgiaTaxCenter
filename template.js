@@ -11,21 +11,9 @@ $(window).on("load", function(){
 		// Loads Background Initially and upon refresh
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
-			console.log("Backgroung to load when there is no hash.");
 			return false;
-		}
+		}else{refreshKeep();return false;}
 	},200);
-});
-
-$(window).on("load", function(){
-	setTimeout(function(){
-		console.log("Second Load function");
-		if($("#caption_c-7").length > 0 && window.location.hash !== ''){
-			refreshKeep();
-			return false;
-			console.log("refreshkeep");
-		}
-	},500);
 });
 
 $(window).on('hashchange', function(){
