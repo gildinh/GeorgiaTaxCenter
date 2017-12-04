@@ -136,7 +136,8 @@ $(window).on("load", function(){
 });
 
 $(window).on('hashchange', function(){
-	console.log("hash has changed");
+	removeBGI();
+	console.log("Outside request will remove image.");
 });
 
 $(window).ready(function(){
@@ -201,7 +202,10 @@ function rndBgImage () {
                 });
 	}
 }
-        
+
+// Function for No Background Image
+function removeBGI() {$("body").css("background", "#EEE9E9");}
+  
 //Adds the new format to the LOGIN page
 function refreshKeep() { $('body').addClass('Login'); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
         
