@@ -75,10 +75,6 @@ $(window).bind("load", function(){
 		rndBgImage();
 		console.log("This handles the event for adding BG when  user logs off");
 		return false;
-	}else{
-		rndBgImage();
-		console.log("Adds the Background for GXD");
-		return false;
 	}
 });
 
