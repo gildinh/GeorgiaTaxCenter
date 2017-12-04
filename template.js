@@ -129,7 +129,7 @@ $(window).on('hashchange', function(){
 });*/
 
 $(window).on("load", function(){
-	if(window.location.href.indexOf("GXD") > -1 && window.location.hash != ''){
+	if(window.location.hash != ''){
 		console.log("Ready");
 	}
 });
