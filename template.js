@@ -4,7 +4,10 @@
 
 $(window).on("load", function(){
 	setTimeout(function(){
-	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == ''){
+	if(window.location.hash == '' && $("#caption_c-7").length > 0){
+		refreshKeep();
+		return false;
+	}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 		rndBgImage();
 		console.log("Backgroung to load when there is no hash.");
 		return false;
