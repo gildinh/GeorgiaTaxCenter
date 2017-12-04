@@ -129,8 +129,8 @@ $(window).on('hashchange', function(){
 });*/
 
 $(window).on("load", function(){
-	if(window.location.hash == ' '){
-		console.log("Ready");
+	if(window.location.hash == ''){
+		console.log("Checks if there is Hash or not.");
 	}
 });
 
