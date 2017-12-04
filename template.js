@@ -71,6 +71,10 @@ $(window).bind("load", function(){
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == false){
 		rndBgImage();
 		console.log("Adds the Background for GXD");
+	}if(window.location.href.indexOf("LogOff") > -1){
+			rndBgImage();
+			console.log("This handles the event for adding BG when  user logs off");
+			return false;
 	}
 });
 
@@ -83,10 +87,6 @@ $(document).ready(function(){
 		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("Outside login");
-			return false;
-		}if(window.location.href.indexOf("LogOff") > -1){
-			rndBgImage();
-			console.log("This handles the event for adding BG when  user logs off");
 			return false;
 		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && $("#caption_c-7").length > 0){
 			refreshKeep();
