@@ -135,9 +135,8 @@ $(window).on("load", function(){
 	}
 });
 
-
 $(window).on('hashchange', function(){
-	if("onhashchange") in window){
+	if("onhashchange") in document){
 		removeBGI();
 		console.log("Outside request will remove image.");
 		return false;
@@ -161,7 +160,7 @@ $(window).ready(function(){
 $(document).ready(function(){
 	console.log("Recording the document ready");
 	setTimeout(function(){
-	if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
+		if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
 	},200);
 });
 
