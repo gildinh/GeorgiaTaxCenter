@@ -4,40 +4,33 @@
 
 $(window).on("load", function(){
 	setTimeout(function(){
-	if(window.location.hash == '' && $("#caption_c-7").length > 0){
-		refreshKeep();
-		return false;
-	}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
-		rndBgImage();
-		console.log("Backgroung to load when there is no hash.");
-		return false;
-	}if($("#caption_c-7").length > 0 && window.location.hash !== ''){
-		refreshKeep();
-		return false;
-	}	
+		// Solution for View on Tap
+		if(window.location.hash == '' && $("#caption_c-7").length > 0){
+			refreshKeep();
+			return false;
+		// Loads Background Initially and upon refresh
+		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
+			rndBgImage();
+			console.log("Backgroung to load when there is no hash.");
+			return false;
+		// keep refresh format
+		}if($("#caption_c-7").length > 0 && window.location.hash !== ''){
+			refreshKeep();
+			return false;
+			console.log("refreshkeep");
+		}	
 	},200);
 	
 });
 
 $(window).on('hashchange', function(){
-	if($("#caption_c-7").length > 0 && window.location.hash !== ''){
-		refreshKeep();
-		return false;
-	}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){
-		removeBGI();
-		console.log("Outside request will remove image.");
-		return false;
-	}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== ''){
-		rndBgImage();
-		console.log("Checks for the Login Div and re-adds background");
-		return false;
-	}else{return true;}
-});
-
-$(window).ready(function(){	
-});
-
-$(document).ready(function(){
+	// New Login Format
+	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
+	// Removes Background Outside Web Request
+	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBGI();return false;}
+	// Loads Background When go back to home page
+	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== ''){rndBgImage();return false;}
+	else{return true;}
 });
 
 //Function that store image in array and randomly choses images.
