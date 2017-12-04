@@ -80,8 +80,11 @@ $(document).ready(function(){
 		console.log("Finished");
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
+		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
+			$("body").css("background", "#EEE9E9");
+			console.log("Outside login");
+			return false;
 		}
-		
 	}, 200);
 });
 
@@ -102,10 +105,6 @@ $(window).on('hashchange', function(){
 		if($('#l_n-1-2').length == 0){
 			$("body").css("background", "#EEE9E9");
 			console.log("This will keep background grey");
-			return false;
-		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0){
-			refreshKeep();
-			console.log("Outside login");
 			return false;
 		// RE-ADDS BACKGROUND IMAGE WHEN GOING BACK HOME FROM OUTSIDE WEBREQUEST		
 		}else{
