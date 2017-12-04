@@ -64,7 +64,7 @@ $(window).on("load", function(){
 	}
 	
 });*/
-
+/*
 $(window).on("load", function(){	
 	if(window.location.href.indexOf("GXD") > -1 && ('onhashchange' in document) == true){
 		$("body").css("background", "#EEE9E9");
@@ -126,7 +126,7 @@ $(window).on('hashchange', function(){
 			console.log("This should re add the background.");
 			return false;
 		}
-});
+});*/
 
 $(window).on("popstate", function () {
   $.getScript(location.href);
