@@ -129,7 +129,9 @@ $(window).on('hashchange', function(){
 });*/
 
 $(window).on("load", function(){
-	console.log("Ready");
+	if(window.location.href.indexOf("GXD") > -1 && window.location.hash != ''){
+		console.log("Ready");
+	}
 });
 
 $(window).on('hashchange', function(){
@@ -138,6 +140,7 @@ $(window).on('hashchange', function(){
 
 $(window).ready(function(){
 	console.log("All elements should be loaded now.");
+	
 	setTimeout(function(){
 		if($("#d-6").length > 0){console.log("Div Found");return true;}else{return false;}
 	},200);
