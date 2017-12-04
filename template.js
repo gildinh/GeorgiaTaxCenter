@@ -217,5 +217,5 @@ function rndBgImage () {
 function removeBGI() {$("body").css("background", "#EEE9E9");}
   
 //Adds the new format to the LOGIN page
-function refreshKeep() { $('body').addClass('Login'); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
+function refreshKeep() {$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
         
