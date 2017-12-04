@@ -93,10 +93,6 @@ $(document).ready(function(){
 			refreshKeep();
 			console.log("Code when logged in.");
 			return false;
-		}if($("#d-8.DocFieldButton.FastEvtLinkClick").length == 0 && $("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("Handles refresh for inside login");
-			return false;
 		}
 	}, 200);
 });
