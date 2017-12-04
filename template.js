@@ -128,10 +128,19 @@ $(window).on('hashchange', function(){
 		}
 });*/
 
-$(window).on("popstate", function () {
-  $.getScript(location.href);
-	console.log("Back Button is detected");
+$(window).on("load", function(){
+	console.log("Ready");
 });
+
+$(window).on('hashchange', function(){
+	console.log("hash has changed");
+});
+
+$(window).ready(function(){
+	console.log("All elements should be loaded now.");
+});
+
+
 
 //Function that store image in array and randomly choses images.
 function rndBgImage () {
