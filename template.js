@@ -141,7 +141,7 @@ $(window).on('hashchange', function(){
 		}
 });
 
-$(window).bind("popstate", function () {
+$(window).on("popstate", function () {
   $.getScript(location.href);
 	console.log("Back Button is detected");
 });
