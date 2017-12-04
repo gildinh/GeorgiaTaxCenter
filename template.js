@@ -4,7 +4,7 @@
 
 $(window).on("load", function(){
 	setTimeout(function(){
-	if(window.location.hash == ''){
+	if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == ''){
 		rndBgImage();
 		console.log("Backgroung to load when there is no hash.");
 		return false;
