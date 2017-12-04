@@ -81,9 +81,6 @@ $(document).ready(function(){
 		if($("#d-8.DocFieldButton.FastEvtLinkClick").length > 0){
 			console.log("Login Button Exists");
 		}
-		if(window.location.hash && ){
-		
-		}
 		
 	}, 200);
 });
