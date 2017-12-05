@@ -12,13 +12,22 @@ $(window).on("load", function(){
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
 			return false;
-		}if(('onhashchange' in document) == false && $("#caption_c-7").length > 0){
-			refreshKeep();
-			console.log("this working");
-			return false;
 		}
 	},200);
 });
+
+
+$(document).ready(function () {
+	setTimeout(){
+		if($("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
+			refreshKeep();
+			console.log("Refresh Inside");
+			return false;
+		}
+	},500);
+});
+
+
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	// New Login Format
