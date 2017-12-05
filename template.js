@@ -35,7 +35,7 @@ $(document).ready(function () {
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	// New Login Format.
-	if($("#caption_c-7").length > 0 && window.location.hash !== ''){ remove();refreshKeep();return false;}
+	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
 	// Removes Background Outside Web Request
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBGI();return false;}
 	// Loads Background When go back to home page
