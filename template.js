@@ -20,7 +20,7 @@ $(window).on('hashchange', function(){
 	// Removes Background Outside Web Request
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBG();return false;}
 	// Loads Background When go back to home page
-	else if($('#d-7.FieldEnabled.Field.DocControlPassword.FastEvtFieldKeyDown.FastFieldEnterEvent.FastEvtFieldFocus').length > 0 && window.location.hash !== ''){rndBgImage();return false;}
+	else if($('#d-7.FieldEnabled.Field.DocControlPassword.FastEvtFieldKeyDown.FastFieldEnterEvent.FastEvtFieldFocus').length > 0 && window.location.hash !== ''){rndBgImage();return false;console.log("Getting HIT");}
 	else{return true;}
 });
 //Function that store image in array and randomly choses images.
