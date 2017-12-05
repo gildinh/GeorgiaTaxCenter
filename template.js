@@ -17,14 +17,13 @@ $(window).on("load", function(){
 });
 
 $(document).ready(function () {
-	if(window.location.hash !== '' && ('onhashchange' in document) == false){
-		remove();
+	if(window.location.hash !== '' && ('onhashchange' in document) == false && $("#caption_c-7").length > 0){
+		refreshKeep();
 		console.log("removed links");
 	}return false;
 	
 	setTimeout(function(){
 		if($("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
-			remove();
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
@@ -96,8 +95,4 @@ function rndBgImage () {
 function removeBGI() {$("body").css("background", "#EEE9E9");}
   
 //Adds the new format to the LOGIN page
-function refreshKeep() {$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
-
-function remove() {
-	$(".NavigationLinks").remove();
-}   
+function refreshKeep() {$(".NavigationLinks").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
