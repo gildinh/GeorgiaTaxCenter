@@ -3,6 +3,9 @@
    certain occasions on the homepageas well as altering the navigation bar */
 
 $(window).on("load", function(){
+	if($("ul.ManagerLogonOptions").length > 0){
+		console.log("You are currently Logged In");
+	}
 	setTimeout(function(){
 		// Solution for View on Tap
 		if(window.location.hash == '' && $("ul.ManagerLogonOptions").length > 0){
@@ -21,11 +24,10 @@ $(window).on("load", function(){
 	removeBGImage();
 	console.log("removeBGImage worked.");
 });
-
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	// New Login Format.
-	if($("#caption_c-7").length > 0 && window.location.hash !== ''){removeLinks();refreshKeep();return false;}
+	if($("#caption_c-7").length > 0 && window.location.hash !== ''){);refreshKeep();return false;}
 	// Removes Background Outside Web Request
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBG();return false;}
 	// Loads Background When go back to home page
@@ -82,7 +84,6 @@ function rndBgImage () {
 }
 
 function removeBG(){$("body").css("background", "#EEE9E9");}
-function removeLinks(){$(".NavBar").remove();}
 function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0){refreshKeep();}}, 500);}  
 //Adds the new format to the LOGIN page
-function refreshKeep() {$(".NavigationLinks").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
+function refreshKeep() {$(".NavBar").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
