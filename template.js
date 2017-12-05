@@ -18,7 +18,7 @@ $(window).on("load", function(){
 
 $(document).ready(function () {
 	setTimeout(function(){
-		if($("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
+		if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
