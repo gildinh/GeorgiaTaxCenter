@@ -26,7 +26,7 @@ $(window).on('hashchange', function(){
 	// New Login Format.
 	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
 	// Removes Background Outside Web Request
-	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBGImage();return false;}
+	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBG();return false;}
 	// Loads Background When go back to home page
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== ''){rndBgImage();return false;}
 	else{return true;}
@@ -80,7 +80,7 @@ function rndBgImage () {
 	}
 }
 
-function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0){refreshKeep();}}, 500);}
-  
+function removeBG(){$("body").css("background", "#EEE9E9");}
+function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0){refreshKeep();}}, 500);}  
 //Adds the new format to the LOGIN page
 function refreshKeep() {$(".NavigationLinks").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
