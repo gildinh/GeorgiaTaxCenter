@@ -5,9 +5,8 @@ $(window).on("load", function(){
 		// Solution for View on Tap
 		if(window.location.hash == '' && $("ul.ManagerLogonOptions").length > 0){refreshKeep();return false;
 		// Loads Background Initially and upon refresh
-		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
-			rndBgImage();
-			return false;
+		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '')){
+			rndBgImage();return false;
 			console.log("Getting Hit");
 		}else if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){refreshKeep();return false;
 		}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){removeBG();return false;}
