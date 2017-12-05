@@ -17,8 +17,14 @@ $(window).on("load", function(){
 });
 
 $(document).ready(function () {
+	if(('onhashchange' in document) == false){
+		remove();
+		console.log("removed links");
+	}return false;
+	
 	setTimeout(function(){
 		if($("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
+			remove();
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
