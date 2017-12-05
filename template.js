@@ -16,9 +16,8 @@ $(window).on("load", function(){
 	},200);
 });
 
-
 $(document).ready(function () {
-	setTimeout(){
+	setTimeout(function(){
 		if($("#caption_c-7").length > 0 && ('onhashchange' in document) == false){
 			refreshKeep();
 			console.log("Refresh Inside");
