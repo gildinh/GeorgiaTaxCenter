@@ -5,7 +5,7 @@
 $(window).on("load", function(){
 	setTimeout(function(){
 		// Solution for View on Tap
-		if(window.location.hash == '' && $("#caption_c-7").length > 0){
+		if(window.location.hash == '' && $("ul.ManagerLogonOptions").length > 0){
 			refreshKeep();
 			return false;
 		// Loads Background Initially and upon refresh
@@ -18,15 +18,11 @@ $(window).on("load", function(){
 			return false;
 		}
 	},200);
+	removeBGImage();
 });
 
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
-	if($("ul.ManagerLogonOptions").length > 0){
-		refreshKeep();
-		console.log("removed links");
-		return false;
-	}
 	// New Login Format.
 	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
 	// Removes Background Outside Web Request
@@ -84,8 +80,7 @@ function rndBgImage () {
 	}
 }
 
-// Function for No Background Image
-function removeBGI() {$("body").css("background", "#EEE9E9");}
+function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0{refreshKeep();}}, 500);}
   
 //Adds the new format to the LOGIN page
 function refreshKeep() {$(".NavigationLinks").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
