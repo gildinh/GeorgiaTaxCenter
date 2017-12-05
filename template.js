@@ -5,12 +5,16 @@
 $(window).on("load", function(){
 	setTimeout(function(){
 		// Solution for View on Tap
-		if((window.location.hash == '' && $("#caption_c-7").length > 0) || (('onhashchange' in document) == false && $("#caption_c-7").length > 0)){
+		if(window.location.hash == '' && $("#caption_c-7").length > 0){
 			refreshKeep();
 			return false;
 		// Loads Background Initially and upon refresh
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
+			return false;
+		}if(('onhashchange' in document) == false && $("#caption_c-7").length > 0){
+			refreshKeep();
+			console.log("this working");
 			return false;
 		}
 	},200);
