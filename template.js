@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
-	if(window.location.hash !== '' && ('onhashchange' in document) == false && $("#caption_c-7").length > 0){
+	if(("#caption_c-7").length > 0){
 		refreshKeep();
 		console.log("removed links");
 		return false;
