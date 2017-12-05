@@ -14,7 +14,7 @@ $(window).on("load", function(){
 		// Loads Background Initially and upon refresh
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
-			return false;
+			return false;$(window).on("load", function(){
 		}if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
 			refreshKeep();
 			console.log("Refresh Inside");
@@ -22,12 +22,12 @@ $(window).on("load", function(){
 		}
 	},200);
 	removeBGImage();
-	console.log("removeBGImage worked.");
 });
+
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	// New Login Format.
-	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
+	if($("ul.ManagerLogonOptions").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
 	// Removes Background Outside Web Request
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash !== ''){removeBG();return false;}
 	// Loads Background When go back to home page
