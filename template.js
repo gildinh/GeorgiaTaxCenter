@@ -19,7 +19,7 @@ $(window).on("load", function(){
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
-		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){
+		}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){
 			removeBG();
 			return false;
 		}
