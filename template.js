@@ -1,11 +1,11 @@
 // CUSTOM GA JavaScript Functionalities //
 /* The following code handles how the site renders background images on certain occasions on the homepageas well as altering the navigation bar */
 $(window).on("load", function(){
-	if(window.location.hash){
-		refreshKeep();
-		console.log("keep refresh");
-		return false;
-	}else if(window.location.href.indexOf("GXD") > -1){rndBgImage();return false;console.log("Loads background");}
+	setInterval(function(){
+		console.log("Testing setIntervals");
+	},1000);
+	
+	
 	
 	setTimeout(function(){
 		// Solution for View on Tap
