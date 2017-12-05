@@ -12,6 +12,7 @@ $(window).on("load", function(){
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
 			return false;
+		}
 	},200);
 });
 // Event Listener for when hashchanges.
