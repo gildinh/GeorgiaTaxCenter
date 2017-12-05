@@ -80,7 +80,7 @@ function rndBgImage () {
 	}
 }
 
-function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0{refreshKeep();}}, 500);}
+function removeBGImage(){setTimeout(function(){if($("ul.ManagerLogonOptions").length > 0){refreshKeep();}}, 500);}
   
 //Adds the new format to the LOGIN page
 function refreshKeep() {$(".NavigationLinks").remove();$("body").css("background", "#EEE9E9"); $('.PageHeaderWrapper').addClass('Login'); $('.PageWrapper').addClass('Login'); $('.NavigationLinks').addClass('Login');}
