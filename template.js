@@ -12,15 +12,17 @@ $(window).on("load", function(){
 			refreshKeep();
 			return false;
 		// Loads Background Initially and upon refresh
-		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
+		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
 			return false;
-		}if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
+		}else if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
+		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){
+			removeBG();
+			return false;
 		}
-
 	},200);
 	removeBGImage();
 });
