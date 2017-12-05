@@ -30,10 +30,6 @@ $(document).ready(function () {
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	if($("ul.ManagerLogonOptions").length > 0){
-		console.log("You are logged in.");
-	}
-	
-	if(("#caption_c-7").length > 0){
 		refreshKeep();
 		console.log("removed links");
 		return false;
