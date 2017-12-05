@@ -1,32 +1,19 @@
 // CUSTOM GA JavaScript Functionalities //
-/* The following code handles how the site renders background images on 
-   certain occasions on the homepageas well as altering the navigation bar */
-
+/* The following code handles how the site renders background images on certain occasions on the homepageas well as altering the navigation bar */
 $(window).on("load", function(){
-	if($("ul.ManagerLogonOptions").length > 0){
-		console.log("You are currently Logged In");
-	}
 	setTimeout(function(){
 		// Solution for View on Tap
-		if(window.location.hash == '' && $("ul.ManagerLogonOptions").length > 0){
-			refreshKeep();
-			return false;
+		if(window.location.hash == '' && $("ul.ManagerLogonOptions").length > 0){refreshKeep();return false;
 		// Loads Background Initially and upon refresh
 		}else if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
 			return false;
-		}else if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
-			refreshKeep();
-			console.log("Refresh Inside");
-			return false;
-		}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){
-			removeBG();
-			return false;
-		}
+			console.log("Getting Hit");
+		}else if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){refreshKeep();return false;
+		}else if($('#d-8.DocFieldButton.FastEvtLinkClick').length == 0 && window.location.hash == ''){removeBG();return false;}
 	},200);
 	removeBGImage();
 });
-
 // Event Listener for when hashchanges.
 $(window).on('hashchange', function(){
 	// New Login Format.
@@ -37,7 +24,6 @@ $(window).on('hashchange', function(){
 	else if($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== ''){rndBgImage();return false;}
 	else{return true;}
 });
-
 //Function that store image in array and randomly choses images.
 function rndBgImage () {
     if((window.location.href.indexOf("GXD") > -1) || (window.location.href.indexOf("TXT") > -1)){
