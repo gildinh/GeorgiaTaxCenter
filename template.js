@@ -17,7 +17,7 @@ $(window).on("load", function(){
 });
 
 $(document).ready(function () {
-	if(('onhashchange' in document) == false){
+	if(window.location.hash !== '' && ('onhashchange' in document) == false){
 		remove();
 		console.log("removed links");
 	}return false;
