@@ -32,7 +32,8 @@ $(window).on('hashchange', function(){
 	if(window.location.hash !== '' && ('onhashchange' in document) == false && $("#caption_c-7").length > 0){
 		refreshKeep();
 		console.log("removed links");
-	}return false;
+		return false;
+	}
 	// New Login Format.
 	if($("#caption_c-7").length > 0 && window.location.hash !== ''){refreshKeep();return false;}
 	// Removes Background Outside Web Request
