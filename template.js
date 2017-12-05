@@ -14,12 +14,13 @@ $(window).on("load", function(){
 		// Loads Background Initially and upon refresh
 		}if(($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash == '') || ($('#d-8.DocFieldButton.FastEvtLinkClick').length > 0 && window.location.hash !== '') || (window.location.hash == '' && $("#caption_c-7").length == 0)){
 			rndBgImage();
-			return false;$(window).on("load", function(){
+			return false;
 		}if($("ul.ManagerLogonOptions").length > 0 && ('onhashchange' in document) == false){
 			refreshKeep();
 			console.log("Refresh Inside");
 			return false;
 		}
+
 	},200);
 	removeBGImage();
 });
